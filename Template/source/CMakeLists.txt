@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 3.13)
-project(Template)
+set(source_files
+        main.cpp
+        )
 
-set(CMAKE_CXX_STANDARD 20)
+set(headers)
 
-add_executable(Template main.cpp)
+add_library(Source ${source_files} ${headers})
