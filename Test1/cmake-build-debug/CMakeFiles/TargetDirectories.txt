@@ -1,0 +1,3 @@
+/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/CMakeFiles/Test1.dir
+/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

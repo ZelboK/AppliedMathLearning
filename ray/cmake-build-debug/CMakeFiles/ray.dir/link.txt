@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g   CMakeFiles/ray.dir/main.cpp.o  -o ray 

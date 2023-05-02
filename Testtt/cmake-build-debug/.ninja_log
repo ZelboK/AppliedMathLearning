@@ -1,0 +1,6 @@
+# ninja log v5
+1	942	1682273133901571017	CMakeFiles/Testtt.dir/main.cpp.o	cf5bf12471090502
+2	1337	1682273134295346743	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	b7ea8cd53c312e0f
+1	1590	1682273134547911105	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	25c77438788d7075
+1	2321	1682273135275394742	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	1dd6e762b5cc3e55
+2	3558	1682273136508156460	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	4936db2403cf8f79

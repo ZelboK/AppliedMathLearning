@@ -1,0 +1,12 @@
+# ninja log v5
+1	70	1682266984050961218	source/CMakeFiles/main2.dir/greeting.cpp.o	84761264ae5c9301
+0	72	1682266984052921509	source/CMakeFiles/greeting.dir/greeting.cpp.o	64f0ad4aeebac6cf
+72	134	1682266984119501000	source/libgreeting.a	6a55039ad3b346fd
+1	1213	1682266985188063903	source/CMakeFiles/main1.dir/main.cpp.o	a72042749dc69abd
+1	1222	1682266985195477095	source/CMakeFiles/main2.dir/main.cpp.o	bb6f85aa06523bd1
+1217	1315	1682266985291587935	source/main1	1be19e0a03ae1aeb
+1222	1316	1682266985294612831	source/main2	93944b035a458914
+2	1640	1682266985613020046	test/CMakeFiles/test_main.dir/greeting_test.cpp.o	cf84a54f1c843dee
+2	1656	1682266985624539253	test/CMakeFiles/test_main.dir/heybro.cpp.o	e3943d8539e3fbf8
+70	1669	1682266985637814682	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	6d99dc8bf63267d2
+3	1874	1682266985848426195	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	ce909080078dcea

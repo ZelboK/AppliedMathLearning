@@ -1,0 +1,21 @@
+# ninja log v5
+0	32	1682267641420930842	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	374c5579295e52c3
+0	32	1682267641420930842	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	374c5579295e52c3
+32	916	1682267642303429280	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8d8de8eb8c2c1e94
+32	916	1682267642303429280	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8d8de8eb8c2c1e94
+916	961	1682267642349836100	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	63de8d1d8887fdb9
+916	961	1682267642349836100	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	63de8d1d8887fdb9
+961	1002	1682267642390248601	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c6ef369aa1278818
+961	1002	1682267642390248601	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c6ef369aa1278818
+1002	1036	1682267642424110003	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	2ec381aea7fff6b8
+1002	1036	1682267642424110003	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	2ec381aea7fff6b8
+1036	1073	1682267642461599847	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	ded53b473ebc25f1
+1036	1073	1682267642461599847	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	ded53b473ebc25f1
+1073	1112	1682267642500915956	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	d5f15be64a47876f
+1073	1112	1682267642500915956	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	d5f15be64a47876f
+1112	1149	1682267642537925519	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1e7f0ca763cc3c4d
+1112	1149	1682267642537925519	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1e7f0ca763cc3c4d
+1150	1202	1682267642590268841	CMakeFiles/googletest-populate-complete	6ad5274a73592530
+1150	1202	1682267642590268841	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	6ad5274a73592530
+1150	1202	1682267642590268841	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	6ad5274a73592530
+1150	1202	1682267642590268841	/Users/danialjavady/Desktop/ksm/Organized/Test1/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	6ad5274a73592530
