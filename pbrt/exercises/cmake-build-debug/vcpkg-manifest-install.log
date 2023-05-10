@@ -1,0 +1,10 @@
+Detecting compiler hash for triplet x64-windows...
+All requested packages are currently installed.
+Restored 0 package(s) from C:\Users\12893\AppData\Local\vcpkg\archives in 155 us. Use --debug to see more details.
+Total install time: 173 us
+catch2 provides CMake targets:
+
+    # this is heuristically generated, and may not be correct
+    find_package(Catch2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Catch2::Catch2 Catch2::Catch2WithMain)
+

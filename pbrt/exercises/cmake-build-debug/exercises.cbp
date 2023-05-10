@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="exercises"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vcpkg\;CMake Files\vcpkg\scripts\;CMake Files\vcpkg\scripts\buildsystems\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\vcpkg_installed\;CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\;CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\;CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\;CMake Files\src\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="exercises">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/exercises.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 exercises"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="exercises/fast">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/exercises.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 exercises/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 test"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Source">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/src/Source.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 Source"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Source/fast">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/src/Source.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 Source/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\src\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExpTests">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/test/ExpTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src"/>
+					<Add directory="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 ExpTests"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExpTests/fast">
+				<Option output="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/test/ExpTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src"/>
+					<Add directory="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 ExpTests/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\cmake-build-debug\test\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/main.cpp">
+			<Option target="exercises"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/bounds.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/constants.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/experiment.cpp">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/test/MainSpec.cpp">
+			<Option target="ExpTests"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/vcpkg.json">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\vcpkg\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2/Catch2Config.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2/Catch2ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2/Catch2Targets-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2/Catch2Targets-release.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2/Catch2Targets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\vcpkg_installed\x64-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

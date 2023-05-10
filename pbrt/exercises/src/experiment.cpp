@@ -3,19 +3,21 @@
 //
 #include <functional>
 #include <random>
+#include <iostream>
 #include "bounds.h"
 // make a header for this stuff
 namespace Experimental
 {
 
 	std::vector<float> genRandom(std::normal_distribution<> dist, int n) {
-		std::random_device rd {};
-		std::mt19937 gen {rd()};
-		std::vector<float> sample(n);
+		std::random_device rd;
+		std::mt19937 gen(rd());
 
-		for(int i = 0; i<n; i++) {
-			sample.push_back(dist(gen));
-		}
+		std::vector<float> sample(n);
+		std::generate(sample.begin(),
+			sample.end(),
+			[&]() { return dist(gen); });
+
 		return sample;
 	}
 
@@ -46,22 +48,26 @@ namespace Experimental
 	template<class T, class A>
 	requires std::floating_point<T> &&
 		std::floating_point<A>
-	auto importanceSamplingMonteCarlo(std::function<T(A)> targetPdf,
+	float importanceSamplingMonteCarlo(
+		std::function<T(A)> fx,
+		std::function<T(A)> targetPdf,
 		std::function<T(A)> importancePdf)
 	{
 		std::normal_distribution<> d {3, 3}; // in an ideal world the importancePdf
 		// would give both the distribution and respective parameters like mean and SD in this case
 		int sampleCount = 10000;
 		std::vector<float> sample = genRandom(d, sampleCount);
-		std::vector<float> importanceWeights(sampleCount);
+		float sum = 0;
 
 		for(auto& point : sample) {
-			T x_i = targetPdf(point);
-			T g_i = importancePdf(point);
-			importanceWeights.push_back(
-				x_i / g_i
-				);
+			auto x_i = targetPdf(point);
+			auto g_i = importancePdf(point);
+			auto weight = x_i / g_i;
+			auto weighted = fx(point) * weight;
+
+			sum+=weighted;
 		}
+		return sum/sample.size();
 
 	}
 }

@@ -5,7 +5,7 @@
 #include <iostream>
 #include "bounds.h"
 #include "experiment.cpp"
-
+#include "constants.h"
 
 TEST_CASE("Hello")
 {
@@ -19,28 +19,16 @@ TEST_CASE("Hello")
 }
 TEST_CASE("Normal distribution Importance Sampling")
 {
-	std::function<float(float)> standardNormalDistPdf = [](float x)
-	{
-	  float mean = 0;
-	  float sd = 1;
-	  float exp = (-0.5) * std::pow(((x - mean) / sd), 2);
-	  float eulerRightHandSide = std::pow(2.7182, exp);
-	  float leftHandSide = 1 / (sd * std::sqrt(2 * 3.14));
-	  return leftHandSide * eulerRightHandSide;
-	};
-	std::function<float(float)> nonStandardNormalDistPdf = [](float x)
-	{
-	  float mean = 3;
-	  float sd = 3;
-	  float exp = (-0.5) * std::pow(((x - mean) / sd), 2);
-	  float eulerRightHandSide = std::pow(2.7182, exp);
-	  float leftHandSide = 1 / (sd * std::sqrt(2 * 3.14));
-	  return leftHandSide * eulerRightHandSide;
-	};
+	std::function<float(float)> standardNormalDistPdf =
+		constants::standardNormalDistPdf;
 
-	std::random_device rd {};
-	std::mt19937 gen {rd()};
-	std::normal_distribution<> d {3, 3};
-	d(gen);
-	REQUIRE(1 == 3);
+	std::function<float(float)> nonStandardNormalDistPdf =
+		constants::createNonStandardNormalDistPdf(3, 3);
+
+	std::function<float(float)> fx = [](float x) {
+		return x*x;
+	};
+	// i'd like to word this as expectation
+	float computedAverage = Experimental::importanceSamplingMonteCarlo(fx, nonStandardNormalDistPdf, standardNormalDistPdf);
+	REQUIRE(1 == computedAverage);
 }
