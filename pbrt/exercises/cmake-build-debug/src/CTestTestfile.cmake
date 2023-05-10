@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src
-# Build directory: C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/src
+# Source directory: /Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/src
+# Build directory: /Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/src
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

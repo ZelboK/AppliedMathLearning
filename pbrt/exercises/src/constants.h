@@ -22,7 +22,7 @@ namespace constants {
 
 	std::function<float(float)> createNonStandardNormalDistPdf(float mean,
 		float standardDeviation) {
-		return	[&](float x)
+		return	[mean, standardDeviation](float x)
 		{
 		  float exp = (-0.5) * std::pow(((x - mean) / standardDeviation), 2);
 		  float eulerRightHandSide = std::pow(eulers, exp);

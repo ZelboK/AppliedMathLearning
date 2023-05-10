@@ -8,6 +8,10 @@
 struct Bounds {
 	float lower;
 	float upper;
+
+	Bounds(float lower, float upper): lower(lower), upper(upper) {
+
+	}
 };
 
 #endif //EXERCISES_SRC_BOUNDS_H_

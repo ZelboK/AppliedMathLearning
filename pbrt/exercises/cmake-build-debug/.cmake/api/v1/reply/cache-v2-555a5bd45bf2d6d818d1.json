@@ -2,6 +2,22 @@
 	"entries" : 
 	[
 		{
+			"name" : "CMAKE_ADDR2LINE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_ADDR2LINE-NOTFOUND"
+		},
+		{
 			"name" : "CMAKE_AR",
 			"properties" : 
 			[
@@ -15,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/lib.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ar"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -39,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"
+			"value" : "/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -78,42 +94,6 @@
 			"value" : "2"
 		},
 		{
-			"name" : "CMAKE_CODEBLOCKS_COMPILER_ID",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Id string of the compiler for the CodeBlocks IDE. Automatically detected when left empty"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_CODEBLOCKS_EXECUTABLE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The CodeBlocks executable"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "CMAKE_CODEBLOCKS_EXECUTABLE-NOTFOUND"
-		},
-		{
-			"name" : "CMAKE_CODEBLOCKS_MAKE_ARGUMENTS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Additional command line arguments when CodeBlocks invokes make. Enter e.g. -j<some_number> to get parallel builds"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
 			"properties" : 
 			[
@@ -135,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/cmake.exe"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -147,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/cpack.exe"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -159,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/ctest.exe"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -175,7 +155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/c++"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -191,7 +171,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/DWIN32 /D_WINDOWS /EHsc"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
@@ -207,7 +187,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/Ob0 /Od /RTC1"
+			"value" : "-g"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
@@ -223,7 +203,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O1 /Ob1 /DNDEBUG"
+			"value" : "-Os -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELEASE",
@@ -239,7 +219,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O2 /Ob2 /DNDEBUG"
+			"value" : "-O3 -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
@@ -255,23 +235,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O2 /Ob1 /DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_CXX_STANDARD_LIBRARIES",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Libraries linked by default with all C++ applications."
-				}
-			],
-			"type" : "STRING",
-			"value" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib"
+			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -287,7 +251,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/cc"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -303,7 +267,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/DWIN32 /D_WINDOWS"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_DEBUG",
@@ -319,7 +283,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/Ob0 /Od /RTC1"
+			"value" : "-g"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_MINSIZEREL",
@@ -335,7 +299,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O1 /Ob1 /DNDEBUG"
+			"value" : "-Os -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELEASE",
@@ -351,7 +315,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O2 /Ob2 /DNDEBUG"
+			"value" : "-O3 -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELWITHDEBINFO",
@@ -367,10 +331,10 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/O2 /Ob1 /DNDEBUG"
+			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
-			"name" : "CMAKE_C_STANDARD_LIBRARIES",
+			"name" : "CMAKE_DLLTOOL",
 			"properties" : 
 			[
 				{
@@ -379,11 +343,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Libraries linked by default with all C applications."
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "STRING",
-			"value" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib"
+			"type" : "FILEPATH",
+			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -395,7 +359,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Unknown"
+			"value" : "MACHO"
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS",
@@ -411,7 +375,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/machine:x64"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_DEBUG",
@@ -427,7 +391,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_MINSIZEREL",
@@ -443,7 +407,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_RELEASE",
@@ -459,7 +423,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO",
@@ -475,7 +439,23 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable output of compile commands during generation."
+				}
+			],
+			"type" : "BOOL",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
@@ -487,31 +467,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "CodeBlocks"
-		},
-		{
-			"name" : "CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "CXX compiler system include directories"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\cppwinrt"
-		},
-		{
-			"name" : "CMAKE_EXTRA_GENERATOR_C_SYSTEM_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "C compiler system include directories"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\cppwinrt"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
@@ -523,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -535,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "NMake Makefiles"
+			"value" : "Ninja"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -583,7 +539,23 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises"
+			"value" : "/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises"
+		},
+		{
+			"name" : "CMAKE_INSTALL_NAME_TOOL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Users/danialjavady/opt/anaconda3/bin/install_name_tool"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -595,7 +567,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/exercises"
+			"value" : "/usr/local"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -611,23 +583,19 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/link.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ld"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : "Program used to build from makefiles."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "nmake"
+			"type" : "UNINITIALIZED",
+			"value" : "/Applications/CLion.app/Contents/bin/ninja/mac/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -643,7 +611,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/machine:x64"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_DEBUG",
@@ -659,7 +627,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL",
@@ -675,7 +643,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_RELEASE",
@@ -691,7 +659,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO",
@@ -707,10 +675,10 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
 		},
 		{
-			"name" : "CMAKE_MT",
+			"name" : "CMAKE_NM",
 			"properties" : 
 			[
 				{
@@ -723,7 +691,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.22000.0/x64/mt.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/nm"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -736,6 +704,74 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "3"
+		},
+		{
+			"name" : "CMAKE_OBJCOPY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_OBJCOPY-NOTFOUND"
+		},
+		{
+			"name" : "CMAKE_OBJDUMP",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/objdump"
+		},
+		{
+			"name" : "CMAKE_OSX_ARCHITECTURES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build architectures for OSX"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_OSX_DEPLOYMENT_TARGET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Minimum OS X version to target for deployment (at runtime); newer APIs weak linked. Set to empty string for default value."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_OSX_SYSROOT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The product will be built against the headers and libraries located inside the indicated SDK."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -790,43 +826,19 @@
 			"properties" : 
 			[
 				{
-					"name" : "HELPSTRING",
-					"value" : "noop for ranlib"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ":"
-		},
-		{
-			"name" : "CMAKE_RC_COMPILER",
-			"properties" : 
-			[
-				{
 					"name" : "ADVANCED",
 					"value" : "1"
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "RC compiler"
+					"value" : "Path to a program."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.22000.0/x64/rc.exe"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ranlib"
 		},
 		{
-			"name" : "CMAKE_RC_COMPILER_WORKS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS",
+			"name" : "CMAKE_READELF",
 			"properties" : 
 			[
 				{
@@ -835,75 +847,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during all build types."
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "STRING",
-			"value" : "-DWIN32"
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during DEBUG builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-D_DEBUG"
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_MINSIZEREL",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during MINSIZEREL builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during RELEASE builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_RELWITHDEBINFO",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during RELWITHDEBINFO builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
+			"type" : "FILEPATH",
+			"value" : "CMAKE_READELF-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -915,7 +863,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/share/cmake-3.25"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -931,7 +879,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/machine:x64"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS_DEBUG",
@@ -947,7 +895,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL",
@@ -963,7 +911,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS_RELEASE",
@@ -979,7 +927,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/INCREMENTAL:NO"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO",
@@ -995,7 +943,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/debug /INCREMENTAL"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SKIP_INSTALL_RPATH",
@@ -1043,7 +991,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/machine:x64"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_STATIC_LINKER_FLAGS_DEBUG",
@@ -1110,7 +1058,7 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_TOOLCHAIN_FILE",
+			"name" : "CMAKE_STRIP",
 			"properties" : 
 			[
 				{
@@ -1119,11 +1067,23 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/vcpkg/scripts/buildsystems/vcpkg.cmake"
+			"type" : "FILEPATH",
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/strip"
+		},
+		{
+			"name" : "CMAKE_UNAME",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "uname command"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/bin/uname"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1151,275 +1111,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed/x64-windows/share/Catch2"
-		},
-		{
-			"name" : "VCPKG_APPLOCAL_DEPS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Automatically copy dependencies into the output directory for executables."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "VCPKG_BOOTSTRAP_OPTIONS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Additional options to bootstrap vcpkg"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "VCPKG_INSTALLED_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory which contains the installed libraries for each triplet"
-				}
-			],
-			"type" : "PATH",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed"
-		},
-		{
-			"name" : "VCPKG_INSTALL_OPTIONS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Additional install options to pass to vcpkg"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "VCPKG_MANIFEST_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The path to the vcpkg manifest directory."
-				}
-			],
-			"type" : "PATH",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises"
-		},
-		{
-			"name" : "VCPKG_MANIFEST_INSTALL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Install the dependencies listed in your manifest:\n    If this is off, you will have to manually install your dependencies.\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md for more info.\n"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "VCPKG_MANIFEST_MODE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Use manifest mode, as opposed to classic mode."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "VCPKG_OVERLAY_PORTS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Overlay ports to use for vcpkg install in manifest mode"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "VCPKG_OVERLAY_TRIPLETS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Overlay triplets to use for vcpkg install in manifest mode"
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "VCPKG_PREFER_SYSTEM_LIBS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Appends the vcpkg paths to CMAKE_PREFIX_PATH, CMAKE_LIBRARY_PATH and CMAKE_FIND_ROOT_PATH so that vcpkg libraries/packages are found after toolchain/system libraries/packages."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "VCPKG_SETUP_CMAKE_PROGRAM_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enable the setup of CMAKE_PROGRAM_PATH to vcpkg paths"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "VCPKG_TARGET_TRIPLET",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Vcpkg target triplet (ex. x86-windows)"
-				}
-			],
-			"type" : "STRING",
-			"value" : "x64-windows"
-		},
-		{
-			"name" : "VCPKG_TRACE_FIND_PACKAGE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Trace calls to find_package()"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "VCPKG_VERBOSE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enables messages from the VCPKG toolchain for debugging purposes."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "X_VCPKG_APPLOCAL_DEPS_INSTALL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "(experimental) Automatically copy dependencies into the install target directory for executables. Requires CMake 3.14."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "X_VCPKG_APPLOCAL_DEPS_SERIALIZED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "(experimental) Add USES_TERMINAL to VCPKG_APPLOCAL_DEPS to force serialization."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "Z_VCPKG_CHECK_MANIFEST_MODE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Making sure VCPKG_MANIFEST_MODE doesn't change"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "ON"
-		},
-		{
-			"name" : "Z_VCPKG_CL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
-		},
-		{
-			"name" : "Z_VCPKG_POWERSHELL_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The path to the PowerShell implementation to use."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:/Program Files/PowerShell/7/pwsh.exe"
-		},
-		{
-			"name" : "Z_VCPKG_PWSH_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/Program Files/PowerShell/7/pwsh.exe"
-		},
-		{
-			"name" : "Z_VCPKG_ROOT_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Vcpkg root directory"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/vcpkg"
-		},
-		{
-			"name" : "_VCPKG_INSTALLED_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory which contains the installed libraries for each triplet"
-				}
-			],
-			"type" : "PATH",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug/vcpkg_installed"
+			"value" : "/usr/local/lib/cmake/Catch2"
 		},
 		{
 			"name" : "exercises_BINARY_DIR",
@@ -1431,7 +1123,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/cmake-build-debug"
+			"value" : "/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug"
 		},
 		{
 			"name" : "exercises_IS_TOP_LEVEL",
@@ -1455,7 +1147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises"
+			"value" : "/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises"
 		}
 	],
 	"kind" : "cache",
