@@ -1,0 +1,12 @@
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/CMakeFiles/exercises.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/CMakeFiles/test.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/src/CMakeFiles/Source.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/src/CMakeFiles/test.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/test/CMakeFiles/ExpTests.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/test/CMakeFiles/test.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/Users/danialjavady/Desktop/ksm/Organized/pbrt/exercises/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir

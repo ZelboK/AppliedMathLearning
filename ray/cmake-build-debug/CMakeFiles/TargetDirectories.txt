@@ -1,3 +1,0 @@
-/tmp/ray/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/ray/cmake-build-debug/CMakeFiles/ray.dir
-/tmp/ray/cmake-build-debug/CMakeFiles/edit_cache.dir
