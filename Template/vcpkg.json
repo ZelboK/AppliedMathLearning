@@ -1,9 +1,0 @@
-{
-  "name": "template",
-  "version-string": "LIVE_AT_HEAD",
-  "homepage": "https://github.com/ZelboK",
-  "description": "description",
-  "dependencies": [
-    "catch2"
-  ]
-}
