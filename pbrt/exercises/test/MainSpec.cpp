@@ -40,21 +40,50 @@ TEST_CASE("Compare Monte Carlo with Trapezoid")
 {
 	std::function<float(float)> normDist = constants::standardNormalDistPdf;
 
-	std::function<float(float)> nonNormDist =
-		constants::createNonStandardNormalDistPdf(3, 3);
+//	std::function<float(float)> nonNormDist =
+	//	constants::createNonStandardNormalDistPdf(3, 3);
 
-	Bounds interval = Bounds(0, 10000);
+	Bounds interval = Bounds(0, 1000);
 
 	float integrated = Experimental::basicMonteCarlo(
-		nonNormDist,
 		normDist,
 		interval
 	);
 	float integratedViaTrap =
-		Experimental::trapezoidalNumericIntegration(nonNormDist, interval);
+		Experimental::trapezoidalNumericIntegration(normDist, interval);
 	std::cout << integratedViaTrap << "and," << integrated << std::endl;
 
 	REQUIRE_THAT(integrated,
 		Catch::Matchers::WithinAbs
 			(integratedViaTrap, 0.0001));
+}
+
+TEST_CASE("Several trials Monte Carlo")
+{
+	std::function<float(float)> normDist = constants::standardNormalDistPdf;
+
+	Bounds interval = Bounds(0, 1000);
+	int sampleCount = 100;
+	float sum = 0;
+	int stop = 100;
+	std::vector<float> elements(stop);
+	for (int i = 1; i < stop; i++)
+	{
+		float integrated = Experimental::basicMonteCarlo(
+			normDist,
+			interval,
+			sampleCount * i
+		);
+		elements.at(i) = integrated;
+		sum += integrated;
+	}
+	auto avg = utility::average(sum, stop);
+	
+}
+
+
+
+
+
+
 }

@@ -5,28 +5,13 @@
 #include <random>
 #include <iostream>
 #include "bounds.h"
+#include "utility.h"
 // make a header for this stuff
 namespace Experimental
 {
 
-	// TODO add concept of bounds
-	std::vector<float> normalDistGenSequence(std::normal_distribution<> dist,
-		int n)
-	{
-		std::random_device rd;
-		std::mt19937 gen(rd());
 
-		std::vector<float> sample(n);
-
-		std::generate(
-			sample.begin(),
-			sample.end(),
-			[&]()
-			{ return dist(gen); });
-
-		return sample;
-	}
-
+	// not responsible for validating interval
 	template<class T, class A>
 	requires std::floating_point<T>
 		&& std::floating_point<A>
@@ -34,23 +19,19 @@ namespace Experimental
 		std::function<T(A)> fn,
 		Bounds interval)
 	{
-		float subintervals = 10000;
-		float height = interval.upper - interval.lower;
-		float width = height / subintervals;
+		int subintervals = 10000;
+		float width = (interval.upper - interval.lower) /
+			static_cast<float>(subintervals);
 		float sum = 0;
 
-		for (float i = interval.lower;
-			 i < interval.upper - width;
-			 i += width)
+		for (int i = 1; i < subintervals - 1; i++)
 		{
-			auto leftBase = fn(i);
-			auto rightBase = fn(i + width);
-			auto area = (height * ((leftBase + rightBase) / 2));
-			sum += area;
+			auto xi = interval.lower + i * width;
+			auto f_xi = fn(xi);
+			sum += 2 * f_xi;
 		}
 
-		return sum;
-
+		return (sum + fn(interval.lower) + fn(interval.upper)) * width / 2;
 	}
 
 	template<class T, class A>
@@ -58,29 +39,34 @@ namespace Experimental
 		std::floating_point<A>
 	float basicMonteCarlo(
 		std::function<T(A)> fx,
-		std::function<T(A)> randDistribution,
-		Bounds interval
+		Bounds interval,
+		int sampleCount
 	)
 	{
-		std::normal_distribution<> d{ 3, 3 }; // in an ideal world the importancePdf
-		int sampleCount = 10000;
-		std::vector<float> sample = normalDistGenSequence(d, sampleCount);
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_real_distribution<> dist(interval.lower, interval.upper);
 		float sum = 0;
-		float height = interval.upper - interval.lower;
 
-		// these two distributions don't correspond to one another
-		for (auto& point : sample)
+		for (int i = 0; i < sampleCount; i++)
 		{
-			auto f_x = fx(point);
-			auto p_x = randDistribution(point);
-			sum += f_x / p_x;
+			auto xi = dist(gen);
+			auto f_xi = fx(xi);
+			sum += f_xi;
 		}
-		float avg = sum / sample.size();
 
-		return avg * height;
-
+		float avg = sum / static_cast<float>(sampleCount);
+		float area = avg * (interval.upper - interval.lower);
+		return area;
 	}
 
+	// these two distributions don't correspond to one another
+//		for (auto& point : sample)
+//		{
+//			auto f_x = fx(point);
+//			auto p_x = randDistribution(point);
+//			sum += f_x / p_x;
+//		}
 	// not responsible for validating that inputs are proper PDFs nor if importancePdf
 	// is a suitable proposal distribution
 	template<class T, class A>
@@ -91,10 +77,10 @@ namespace Experimental
 		std::function<T(A)> targetPdf,
 		std::function<T(A)> importancePdf)
 	{
-		std::normal_distribution<> d{ 3, 3 }; // in an ideal world the importancePdf
+		std::normal_distribution<float> d{ 3, 3 }; // in an ideal world the importancePdf
 		// would give both the distribution and respective parameters like mean and SD in this case
 		int sampleCount = 10000;
-		std::vector<float> sample = normalDistGenSequence(d, sampleCount);
+		std::vector<float> sample = utility::distRandGenSequence(d, sampleCount);
 		float sum = 0;
 
 		for (auto& point : sample)

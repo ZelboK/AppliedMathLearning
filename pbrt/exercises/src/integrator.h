@@ -7,11 +7,14 @@
 #include <functional>
 #include "bounds.h"
 
+
+
 // i do not like duck typing : (
 template <class Distribution, class FnType>
 struct Integrator {
 	Distribution dist;
 	std::function<FnType> pdf;
+	int samples;
 	Bounds bounds;
 
 	auto integrate() {

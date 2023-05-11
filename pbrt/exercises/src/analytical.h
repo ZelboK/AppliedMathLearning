@@ -16,6 +16,13 @@ namespace analytical {
 		float marginOfError
 		);
 
+	template <class Distribution, class Fn>
+	auto computeUnbiasedEstimate(int trials,
+		Distribution d,
+		Fn pdf) {
+
+	}
+
 }
 
 template<class Distribution, class FnType>
