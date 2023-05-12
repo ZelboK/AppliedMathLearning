@@ -47,7 +47,8 @@ TEST_CASE("Compare Monte Carlo with Trapezoid")
 
 	float integrated = Experimental::basicMonteCarlo(
 		normDist,
-		interval
+		interval,
+		100
 	);
 	float integratedViaTrap =
 		Experimental::trapezoidalNumericIntegration(normDist, interval);
@@ -58,15 +59,13 @@ TEST_CASE("Compare Monte Carlo with Trapezoid")
 			(integratedViaTrap, 0.0001));
 }
 
-TEST_CASE("Several trials Monte Carlo")
-{
-	std::function<float(float)> normDist = constants::standardNormalDistPdf;
 
-	Bounds interval = Bounds(0, 1000);
-	int sampleCount = 100;
-	float sum = 0;
-	int stop = 100;
+static auto experiment(int stop,
+	const std::function<float(float)>& normDist,
+	Bounds interval,
+	int sampleCount) {
 	std::vector<float> elements(stop);
+	float sum = 0.0;
 	for (int i = 1; i < stop; i++)
 	{
 		float integrated = Experimental::basicMonteCarlo(
@@ -77,8 +76,26 @@ TEST_CASE("Several trials Monte Carlo")
 		elements.at(i) = integrated;
 		sum += integrated;
 	}
-	auto avg = utility::average(sum, stop);
-	
+	float avg = sum/stop;
+	auto variance = utility::computeVariance(avg, elements);
+	return variance;
+}
+
+TEST_CASE("Several trials Monte Carlo")
+{
+	std::function<float(float)> normDist = constants::standardNormalDistPdf;
+
+	Bounds interval = Bounds(0, 1000);
+	int sampleCount = 100;
+
+	for(int i = 2; i<50; i++) {
+		auto cur = experiment(i*12,
+			normDist,
+			interval,
+			sampleCount);
+		std::cout << cur << std::endl;
+	}
+	std::cout << "done";
 }
 
 
@@ -86,4 +103,3 @@ TEST_CASE("Several trials Monte Carlo")
 
 
 
-}

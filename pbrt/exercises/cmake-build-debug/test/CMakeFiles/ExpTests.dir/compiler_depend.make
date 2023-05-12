@@ -185,15 +185,19 @@ test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\inclu
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\internal\catch_test_registry.hpp
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\interfaces\catch_interfaces_testcase.hpp
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\internal\catch_preprocessor_remove_parens.hpp
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\matchers\catch_matchers_floating_point.hpp
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\matchers\catch_matchers.hpp
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: vcpkg_installed\x64-windows\include\catch2\matchers\internal\catch_matchers_impl.hpp
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\random"
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iostream"
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\bounds.h"
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\experiment.cpp"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\functional"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xhash"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\list"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xnode_handle.h"
-test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\random"
-test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iostream"
-test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\bounds.h"
-test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\experiment.cpp"
+test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\utility.h"
 test\CMakeFiles\ExpTests.dir\MainSpec.cpp.obj: "C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\constants.h"
 
 
@@ -502,6 +506,8 @@ vcpkg_installed\x64-windows\include\catch2\interfaces\catch_interfaces_enum_valu
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\optional":
 
+"C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\utility.h":
+
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xsmf_control.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\sstream":
@@ -568,6 +574,16 @@ vcpkg_installed\x64-windows\include\catch2\internal\catch_config_counter.hpp:
 
 vcpkg_installed\x64-windows\include\catch2\internal\catch_preprocessor_remove_parens.hpp:
 
+vcpkg_installed\x64-windows\include\catch2\matchers\catch_matchers_floating_point.hpp:
+
+vcpkg_installed\x64-windows\include\catch2\matchers\catch_matchers.hpp:
+
+vcpkg_installed\x64-windows\include\catch2\matchers\internal\catch_matchers_impl.hpp:
+
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\random":
+
+"C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\bounds.h":
+
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\functional":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map":
@@ -575,7 +591,3 @@ vcpkg_installed\x64-windows\include\catch2\internal\catch_preprocessor_remove_pa
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xhash":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\list":
-
-"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\random":
-
-"C:\Users\12893\Desktop\CG resources\AppliedMathLearning\pbrt\exercises\src\bounds.h":

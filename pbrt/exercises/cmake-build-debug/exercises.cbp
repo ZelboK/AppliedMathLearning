@@ -187,6 +187,12 @@
 		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/main.cpp">
 			<Option target="exercises"/>
 		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/Distribution.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/analytical.h">
+			<Option target="Source"/>
+		</Unit>
 		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/bounds.h">
 			<Option target="Source"/>
 		</Unit>
@@ -194,6 +200,12 @@
 			<Option target="Source"/>
 		</Unit>
 		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/experiment.cpp">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/integrator.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/src/utility.h">
 			<Option target="Source"/>
 		</Unit>
 		<Unit filename="C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/test/MainSpec.cpp">
