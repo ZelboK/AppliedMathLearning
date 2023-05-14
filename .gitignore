@@ -1,38 +1,54 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# C++ build artifacts
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
 *.out
 *.app
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.ipch
 
-# Directories
-build*/*
-.vscode/ipch/*
-.clangd/*
-.cache/*
+# Executable and binary files
+*.bin
+*.hex
+*.elf
+
+# CMake build folders
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+cmake-build-debug/
+
+*.swp
+*.swo
+*.*~
+*.tmp
+*.bak
+*.autosave
+*.cache
+*.log
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+.idea/
+*.iml
+vcpkg/
+vcpkg_installed

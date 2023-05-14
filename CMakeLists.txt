@@ -4,12 +4,11 @@ project(exercises)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(exercises main.cpp)
-set(
-        CMAKE_TOOLCHAIN_FILE "-DCMAKE_TOOLCHAIN_FILE=C:/Users/12893/Desktop/CG resources/AppliedMathLearning/pbrt/exercises/vcpkg/scripts/buildsystems/vcpkg.cmake"
-)
+message("${CMAKE_SOURCE_DIR}")
+set(CMAKE_TOOLCHAIN_FILE
+        "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-find_package(Catch2 REQUIRED)
-
+find_package(Catch2 CONFIG REQUIRED)
 enable_testing()
 add_subdirectory(src)
 add_subdirectory(test)

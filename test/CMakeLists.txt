@@ -1,6 +1,7 @@
 set(test_files MainSpec.cpp)
 
 add_executable(ExpTests ${test_files})
+find_package(Catch2 REQUIRED)
 target_link_libraries(ExpTests
         Catch2::Catch2
         Catch2::Catch2WithMain
