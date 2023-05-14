@@ -3,7 +3,7 @@
 ####### Any changes to this file will be overwritten by the next CMake run ####
 ####### The input file was Catch2Config.cmake.in                            ########
 
-get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../" ABSOLUTE)
+get_filename_component(PACKAGE_PREFIX_DIR "../.." ABSOLUTE)
 
 macro(set_and_check _var _file)
   set(${_var} "${_file}")
@@ -28,7 +28,7 @@ endmacro()
 # Avoid repeatedly including the targets
 if(NOT TARGET Catch2::Catch2)
     # Provide path for scripts
-    list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}")
+    list(APPEND CMAKE_MODULE_PATH ".")
 
-    include(${CMAKE_CURRENT_LIST_DIR}/Catch2Targets.cmake)
+    include(Catch2Targets.cmake)
 endif()
