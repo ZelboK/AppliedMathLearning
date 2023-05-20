@@ -1,6 +1,7 @@
 #include <iostream>
 #include <functional>
 #include "src/bounds.h"
+#include "src/spline_interpolation/spline_interpolation.h"
 
 template <class B, class A>
 float function(std::function<B(A)> fn) {
@@ -18,7 +19,6 @@ float computeCdfUnaryPdf(std::function<A(A)> pdf, Bounds bounds) {
 
 int main()
 {
-
 	std::function<float(float)> uniform = [](float x) {
 		if(x<0 || x>1) {
 			return 0;

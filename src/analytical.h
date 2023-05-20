@@ -23,6 +23,17 @@ namespace analytical {
 
 	}
 
+	template<typename T>
+	void foo(const T& container)
+	requires requires(T a) {
+		{ a.begin() } -> std::same_as<typename T::iterator>;
+		{ a.end() } -> std::same_as<typename T::iterator>;
+		requires std::same_as<typename T::value_type, int>;
+	}
+	{
+		// your code here
+	}
+
 }
 
 template<class Distribution, class FnType>
