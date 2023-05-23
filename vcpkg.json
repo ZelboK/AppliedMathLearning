@@ -1,9 +1,7 @@
 {
-  "name": "experiment",
-  "version-string": "LIVE_AT_HEAD",
-  "homepage": "https://github.com/ZelboK",
-  "description": "Machine Learning",
-  "dependencies": [
-    "catch2"
-  ]
+  "name" : "experiment",
+  "version-string" : "LIVE_AT_HEAD",
+  "homepage" : "https://github.com/ZelboK",
+  "description" : "Machine Learning",
+  "dependencies" : [ "catch2", "eigen3"]
 }

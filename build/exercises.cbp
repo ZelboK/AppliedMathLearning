@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="exercises"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\.clion-vcpkg\;CMake Files\..\..\.clion-vcpkg\vcpkg\;CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\;CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\buildsystems\;CMake Files\build\;CMake Files\build\vcpkg_installed\;CMake Files\build\vcpkg_installed\x86-windows\;CMake Files\build\vcpkg_installed\x86-windows\share\;CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\;CMake Files\build\vcpkg_installed\x86-windows\share\eigen3\;CMake Files\src\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="exercises">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/exercises.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 exercises"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="exercises/fast">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/exercises.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 exercises/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 test"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Source">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/src/Source.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/src"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 Source"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Source/fast">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/src/Source.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/src"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 Source/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExpTests">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/test/ExpTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/src"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 ExpTests"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExpTests/fast">
+				<Option output="C:/Users/devel/ksm/AppliedMathLearning/build/test/ExpTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/devel/ksm/AppliedMathLearning/build/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/src"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include"/>
+					<Add directory="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/include/eigen3"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 ExpTests/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\devel\ksm\AppliedMathLearning\build\test\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/main.cpp">
+			<Option target="exercises"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/analytical.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/bounds.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/concepts/general.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/constants.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/distribution.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/experiment.cpp">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/integrator.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/spline_interpolation/bicubic.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/spline_interpolation/spline_interpolation.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/utility.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/test/MainSpec.cpp">
+			<Option target="ExpTests"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/test/SplineInterpolationSpec.cpp">
+			<Option target="ExpTests"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/vcpkg.json">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/../../.clion-vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/Catch2/Catch2Config.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/Catch2/Catch2ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/Catch2/Catch2Targets-debug.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/Catch2/Catch2Targets-release.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/Catch2/Catch2Targets.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\Catch2\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\eigen3\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\eigen3\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/build/vcpkg_installed/x86-windows/share/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\build\vcpkg_installed\x86-windows\share\eigen3\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

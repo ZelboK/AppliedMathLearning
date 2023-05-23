@@ -2,7 +2,7 @@
 #include <functional>
 #include "src/bounds.h"
 #include "src/spline_interpolation/spline_interpolation.h"
-
+#include <Eigen/Dense>
 template <class B, class A>
 float function(std::function<B(A)> fn) {
 
