@@ -1,6 +1,6 @@
 set(test_files
         MainSpec.cpp
-        SplineInterpolationSpec.cpp)
+        SplineInterpolationSpec.cpp ExperimentsOnlySpec.cpp)
 
 add_executable(ExpTests ${test_files})
 find_package(Catch2 REQUIRED)

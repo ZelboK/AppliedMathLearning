@@ -128,7 +128,7 @@ namespace bicubic {
                 double f_y_Cur =
                         (below - above) / 2;
                 f_y.push_back(f_y_Cur);
-
+				f_xy.push_back(f_y_Cur);
             }
         }
 

@@ -5,7 +5,6 @@
 #ifndef EXERCISES_SRC_SPLINE_INTERPOLATION_SPLINE_INTERPOLATION_H_
 #define EXERCISES_SRC_SPLINE_INTERPOLATION_SPLINE_INTERPOLATION_H_
 
-#include "src/concepts/general.h"
 // What will the blueprints of a SplineInterpolation look like for a simple 1 dimensional
 // input?
 
