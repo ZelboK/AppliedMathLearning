@@ -1,16 +1,12 @@
 //
-// Created by Danial javady on 2023-05-24.
+// Created by Danial Javady on 2023-05-24.
 //
-// This spec is not intended to assure / prove anyhting.
-// It simply exists so i can just play around
+// This spec is not intended to assure / prove anything.
+// It simply exists, so I can just play around
 // Look at it similar to doing math problems in a textbook in a notebook
 
 #include <catch2/catch_test_macros.hpp>
-#include <catch2/matchers/catch_matchers_floating_point.hpp>
-#include <random>
 #include <iostream>
-#include <tuple>
-
 #include <stdexcept>
 #include <vector>
 
@@ -24,13 +20,19 @@ static std::vector<double> extractColsForXDerivation(const std::vector<double>& 
 	std::vector<double> differentials;
 	differentials.reserve(row.size());  // This can help performance by avoiding reallocations
 
-	differentials.push_back(row.at(1) - row.at(0));
-	for (std::size_t i = 1; i < row.size() - 1; ++i)
+	differentials.push_back(
+		(row.at(1) - row.at(0)) / 2
+	);
+	for (std::size_t i = 1; i < row.size() - 1; i++)
 	{
-		differentials.push_back(row.at(i + 1) - row.at(i - 1));
-	}
-	differentials.push_back(row.at(row.size() - 1) - row.at(row.size() - 2));
 
+		double diff = row.at(i + 1) - row.at(i - 1);
+		std::cout << diff / 2 << " on i: " << i << ", " << std::endl;
+		differentials.push_back(diff / 2);
+	}
+	auto last = (row.at(row.size() - 1) - row.at(row.size() - 2))/2;
+	differentials.push_back(last);
+	std::cout << std::endl << "last: " << last << std::endl;
 	return differentials;
 }
 static std::vector<double> extractColsForXDerivationViaFP(const std::vector<double>& row)
@@ -61,22 +63,49 @@ static std::vector<double> extractColsForXDerivationViaFP(const std::vector<doub
 	return differentials;
 }
 
+// matrices are going to be organized in row-order if they're 2 dimensional vectors.
+// the alternative is to just have a 1 dimensional std::vector, which could be easier to reason about
+static std::vector<std::vector<double>> extractRowsForYDerivation(
+	const std::vector<std::vector<double>>& matrix)
+{
+	// okay. So i need to formulate some kind of algorithm that will allow me to access things by column.
+	// this will likely be inefficient due to how hardware works. Figure that out later.
+
+
+	// There exists as many columns as there are in each row. There exists no validation to check if the
+	// columns are the same across all rows, but don't bother with that.
+	// You want to get the Y derivative. You don't even need to like, ... I think you can just iterate
+	// over the neighborhood and calculate the derivatives. You just have to check boundaries.
+
+	for (int i = 0; i < matrix.size(); i++)
+	{
+		auto curRow = matrix.at(i);
+		for (int j = 0; j < curRow.size(); j++)
+		{
+			auto above = curRow[j - 1];
+			auto below = curRow[j + 1];
+			auto diff = (below - above) / 2;
+		}
+	}
+
+}
+
 TEST_CASE("EXPERIMENTS ONLY")
 {
 	std::vector<std::vector<double>> matrix = {{ 1, 3, 6 },
 											   { 9, 5, 2 },
 											   { 1, 2, 4 }};
-	auto expected_r0c0 = matrix.at(0).at(1) - matrix.at(0).at(0);
-	auto expected_r0c1 = matrix.at(0).at(2) - matrix.at(0).at(0);
-	auto expected_r0c2 = matrix.at(0).at(2) - matrix.at(0).at(1);
+	double expected_r0c0 = (matrix.at(0).at(1) - matrix.at(0).at(0)) / 2;
+	double expected_r0c1 = (matrix.at(0).at(2) - matrix.at(0).at(0)) / 2;
+	double expected_r0c2 = (matrix.at(0).at(2) - matrix.at(0).at(1)) / 2;
 
-	auto expected_r1c0 = matrix.at(1).at(1) - matrix.at(1).at(0);
-	auto expected_r1c1 = matrix.at(1).at(2) - matrix.at(1).at(0);
-	auto expected_r1c2 = matrix.at(1).at(2) - matrix.at(1).at(1);
+	double expected_r1c0 = (matrix.at(1).at(1) - matrix.at(1).at(0)) / 2;
+	double expected_r1c1 = (matrix.at(1).at(2) - matrix.at(1).at(0)) / 2;
+	double expected_r1c2 = (matrix.at(1).at(2) - matrix.at(1).at(1)) / 2;
 
-	auto expected_r2c0 = matrix.at(2).at(1) - matrix.at(2).at(0);
-	auto expected_r2c1 = matrix.at(2).at(2) - matrix.at(2).at(0);
-	auto expected_r2c2 = matrix.at(2).at(2) - matrix.at(2).at(1);
+	double expected_r2c0 = (matrix.at(2).at(1) - matrix.at(2).at(0)) / 2;
+	double expected_r2c1 = (matrix.at(2).at(2) - matrix.at(2).at(0)) / 2;
+	double expected_r2c2 = (matrix.at(2).at(2) - matrix.at(2).at(1)) / 2;
 
 	std::vector<std::vector<double>> expectedXDeriv =
 		{{ expected_r0c0, expected_r0c1, expected_r0c2 },
@@ -84,27 +113,49 @@ TEST_CASE("EXPERIMENTS ONLY")
 		 { expected_r2c0, expected_r2c1, expected_r2c2 }};
 
 
-
-	SECTION("3x3 first derivative of image discrete values, edge replication strategy")
-	{
-		for (auto& row : expectedXDeriv)
-		{
-			for (auto& col : row)
-			{
-				std::cout << col << ",";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "next test" << std::endl;
-	}
+//
+//	SECTION("3x3 first derivative of image discrete values, edge replication strategy")
+//	{
+//		for (auto& row : expectedXDeriv)
+//		{
+//			for (auto& col : row)
+//			{
+//				std::cout << col << ", ";
+//			}
+//			std::cout << std::endl;
+//		}
+//		std::cout << "next test" << std::endl << std::endl;
+//	}
 
 	SECTION("Differentiate against x axis")
 	{
-		auto first = extractColsForXDerivation(matrix.at(0));
-		auto second = extractColsForXDerivation(matrix.at(1));
-		auto third = extractColsForXDerivation(matrix.at(2));
 
-		std::vector<std::vector<double>> actual{ first, second, third };
+		std::vector<std::vector<double>> actual;
+
+		for(int i = 0; i<matrix.size(); i++) {
+			actual.push_back(extractColsForXDerivation(matrix.at(i)));
+		}
+
+		for (auto& row : matrix)
+		{
+			for (auto& col : row)
+			{
+				std::cout << col << ", ";
+
+			}
+			std::cout << std::endl;
+
+		}
+
+		for (auto& row : actual)
+		{
+			for (auto& col : row)
+			{
+				std::cout << col << ", ";
+			}
+			std::cout << std::endl;
+		}
+		//	std::cout << "next test" << std::endl  << std::endl;
 
 		for (int i = 0; i < actual.size(); i++)
 		{
@@ -113,34 +164,14 @@ TEST_CASE("EXPERIMENTS ONLY")
 			{
 				double expected = expectedXDeriv.at(i).at(j);
 				double actualValue = actual.at(i).at(j);
-				std::cout << expected << "expected vs actual: " << actualValue << std::endl;
-				REQUIRE(actualValue == expected);
+				//	std::cout << i << "i vs j: " << j << std::endl;
+				//	std::cout << expected << "expected vs actual: " << actualValue << std::endl;
+				//	REQUIRE(actualValue == expected);
 			}
 		}
 
 	}
 }
 
-template<class Matrix>
-static Matrix getFirstDerivGeneral(Matrix matrix)
-{
 
-}
 
-static std::tuple<double, double, double> extractRowsForYDerivation(const std::vector<std::vector<double>>& matrix)
-{
-
-}
-
-static std::vector<std::vector<double>> getFirstDerivVector(const std::vector<std::vector<double>>& matrix)
-{
-
-	for (int i = 0; i < matrix.size(); i++)
-	{
-		auto curRow = matrix.at(i);
-		for (int j = 0; j < curRow.size(); j++)
-		{
-
-		}
-	}
-}
