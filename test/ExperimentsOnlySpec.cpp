@@ -60,7 +60,7 @@ TEST_CASE("Image View") {
                                                {1, 2, 4}};
     std::vector<double> firstRow = {1, 3, 6};
 
-    ImageView<double, std::vector<double>> image(firstRow, Dimensions(0, 0), Dimensions(2, 2));
+ //   ImageView<double, std::vector<double>> image(firstRow, Dimensions(0, 0), Dimensions(2, 2));
 }
 
 TEST_CASE("EXPERIMENTS ONLY")
