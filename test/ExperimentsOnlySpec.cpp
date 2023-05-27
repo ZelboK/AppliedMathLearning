@@ -230,7 +230,7 @@ static std::vector<double> bicubic(const VectorMatrix &matrix, Dimensions newDim
         for (int j = 0; j < newDims.x; j++) {
             int fromRow = i / scale; // we want it to round down here.
             int fromCol = j / scale;
-            attain4x4Neighborhood(matrix, fromRow, fromCol);
+                attain4x4Neighborhood(matrix, fromRow, fromCol);
 
 
         }
