@@ -1,13 +1,16 @@
 set(source_files
-        experiment.cpp)
+        experiment.cpp
+        differentiate/differentiate.cpp)
 set(headers
-        bounds.h
+        models/bounds.h
         constants.h
         analytical.h
-        integrator.h
-        distribution.h
+        models/integrator.h
+        models/distribution.h
         utility.h
-        concepts/general.h)
+        concepts/general.h
+        models/VectorMatrix.h
+        differentiate/differentiate.h)
 
 set(spline_interpolation_files
         spline_interpolation/spline_interpolation.h

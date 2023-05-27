@@ -27,15 +27,13 @@ struct Dimensions
 	{
 	}
 
-	size_t size() {
+	[[nodiscard]] size_t size() const {
 		return x*y;
 	}
 };
 
 template<class Pixels, ContainerOf<Pixels> Image>
-requires(std::is_arithmetic_v<Pixels>
-    && std::is_const_v<typename Image::value_type>)
-class ImageView
+requires(std::is_arithmetic_v<Pixels>) class ImageView
 {
  private:
 	const Image& referenceToOwner;

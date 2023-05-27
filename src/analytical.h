@@ -6,7 +6,7 @@
 #define EXERCISES_SRC_ANALYTICAL_H_
 
 #include <functional>
-#include "integrator.h"
+#include "models/integrator.h"
 namespace analytical {
 
 	template <class Distribution, class FnType>
@@ -21,17 +21,6 @@ namespace analytical {
 		Distribution d,
 		Fn pdf) {
 
-	}
-
-	template<typename T>
-	void foo(const T& container)
-	requires requires(T a) {
-		{ a.begin() } -> std::same_as<typename T::iterator>;
-		{ a.end() } -> std::same_as<typename T::iterator>;
-		requires std::same_as<typename T::value_type, int>;
-	}
-	{
-		// your code here
 	}
 
 }

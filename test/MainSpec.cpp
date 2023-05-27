@@ -2,7 +2,7 @@
 #include <catch2/matchers/catch_matchers_floating_point.hpp>
 #include <random>
 #include <iostream>
-#include "bounds.h"
+#include "models/bounds.h"
 #include "experiment.cpp"
 #include "constants.h"
 

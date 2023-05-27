@@ -10,5 +10,6 @@ target_link_libraries(ExpTests
         Source)
 target_include_directories(ExpTests PRIVATE
         "${CMAKE_SOURCE_DIR}/src"
+        "${CMAKE_SOURCE_DIR}/internal_libraries"
         )
 add_test(NAME Experiment COMMAND Experiment)

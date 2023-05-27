@@ -4,7 +4,7 @@
 #include <functional>
 #include <random>
 #include <iostream>
-#include "bounds.h"
+#include "models/bounds.h"
 #include "utility.h"
 // make a header for this stuff
 namespace Experimental
