@@ -19,6 +19,18 @@ float computeCdfUnaryPdf(std::function<A(A)> pdf, Bounds bounds) {
 
 int main()
 {
+
+	int row = 2;
+	int col = 3;
+
+	for(int i = col-1; i<col+1; i++) {
+		for(int j = row-1; j<row+1; j++) {
+			std::cout << i << ", " << j << " ";
+		}
+		std::cout << std::endl;
+	}
+
+
 	std::function<float(float)> uniform = [](float x) {
 		if(x<0 || x>1) {
 			return 0;

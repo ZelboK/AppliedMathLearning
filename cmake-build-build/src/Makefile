@@ -140,29 +140,53 @@ Source/fast:
 	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/build
 .PHONY : Source/fast
 
-experiment.o: experiment.cpp.o
-.PHONY : experiment.o
+Experiment.o: Experiment.cpp.o
+.PHONY : Experiment.o
 
 # target to build an object file
-experiment.cpp.o:
-	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/experiment.cpp.o
-.PHONY : experiment.cpp.o
+Experiment.cpp.o:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/Experiment.cpp.o
+.PHONY : Experiment.cpp.o
 
-experiment.i: experiment.cpp.i
-.PHONY : experiment.i
+Experiment.i: Experiment.cpp.i
+.PHONY : Experiment.i
 
 # target to preprocess a source file
-experiment.cpp.i:
-	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/experiment.cpp.i
-.PHONY : experiment.cpp.i
+Experiment.cpp.i:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/Experiment.cpp.i
+.PHONY : Experiment.cpp.i
 
-experiment.s: experiment.cpp.s
-.PHONY : experiment.s
+Experiment.s: Experiment.cpp.s
+.PHONY : Experiment.s
 
 # target to generate assembly for a file
-experiment.cpp.s:
-	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/experiment.cpp.s
-.PHONY : experiment.cpp.s
+Experiment.cpp.s:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/Experiment.cpp.s
+.PHONY : Experiment.cpp.s
+
+differentiate/Differentiate.o: differentiate/Differentiate.cpp.o
+.PHONY : differentiate/Differentiate.o
+
+# target to build an object file
+differentiate/Differentiate.cpp.o:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/differentiate/Differentiate.cpp.o
+.PHONY : differentiate/Differentiate.cpp.o
+
+differentiate/Differentiate.i: differentiate/Differentiate.cpp.i
+.PHONY : differentiate/Differentiate.i
+
+# target to preprocess a source file
+differentiate/Differentiate.cpp.i:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/differentiate/Differentiate.cpp.i
+.PHONY : differentiate/Differentiate.cpp.i
+
+differentiate/Differentiate.s: differentiate/Differentiate.cpp.s
+.PHONY : differentiate/Differentiate.s
+
+# target to generate assembly for a file
+differentiate/Differentiate.cpp.s:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Source.dir/build.make src/CMakeFiles/Source.dir/differentiate/Differentiate.cpp.s
+.PHONY : differentiate/Differentiate.cpp.s
 
 # Help Target
 help:
@@ -174,9 +198,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... Source"
-	@echo "... experiment.o"
-	@echo "... experiment.i"
-	@echo "... experiment.s"
+	@echo "... Experiment.o"
+	@echo "... Experiment.i"
+	@echo "... Experiment.s"
+	@echo "... differentiate/Differentiate.o"
+	@echo "... differentiate/Differentiate.i"
+	@echo "... differentiate/Differentiate.s"
 .PHONY : help
 
 

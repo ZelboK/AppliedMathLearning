@@ -140,6 +140,30 @@ ExpTests/fast:
 	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/ExpTests.dir/build.make test/CMakeFiles/ExpTests.dir/build
 .PHONY : ExpTests/fast
 
+DifferentiateSpec.o: DifferentiateSpec.cpp.o
+.PHONY : DifferentiateSpec.o
+
+# target to build an object file
+DifferentiateSpec.cpp.o:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/ExpTests.dir/build.make test/CMakeFiles/ExpTests.dir/DifferentiateSpec.cpp.o
+.PHONY : DifferentiateSpec.cpp.o
+
+DifferentiateSpec.i: DifferentiateSpec.cpp.i
+.PHONY : DifferentiateSpec.i
+
+# target to preprocess a source file
+DifferentiateSpec.cpp.i:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/ExpTests.dir/build.make test/CMakeFiles/ExpTests.dir/DifferentiateSpec.cpp.i
+.PHONY : DifferentiateSpec.cpp.i
+
+DifferentiateSpec.s: DifferentiateSpec.cpp.s
+.PHONY : DifferentiateSpec.s
+
+# target to generate assembly for a file
+DifferentiateSpec.cpp.s:
+	cd /Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/ExpTests.dir/build.make test/CMakeFiles/ExpTests.dir/DifferentiateSpec.cpp.s
+.PHONY : DifferentiateSpec.cpp.s
+
 ExperimentsOnlySpec.o: ExperimentsOnlySpec.cpp.o
 .PHONY : ExperimentsOnlySpec.o
 
@@ -222,6 +246,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ExpTests"
+	@echo "... DifferentiateSpec.o"
+	@echo "... DifferentiateSpec.i"
+	@echo "... DifferentiateSpec.s"
 	@echo "... ExperimentsOnlySpec.o"
 	@echo "... ExperimentsOnlySpec.i"
 	@echo "... ExperimentsOnlySpec.s"

@@ -145,6 +145,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src"/>
+					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/internal_libraries"/>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build/vcpkg_installed/x64-osx/include"/>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build/vcpkg_installed/x64-osx/include/eigen3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
@@ -169,6 +170,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src"/>
+					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/internal_libraries"/>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build/vcpkg_installed/x64-osx/include"/>
 					<Add directory="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/cmake-build-build/vcpkg_installed/x64-osx/include/eigen3"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
@@ -189,25 +191,40 @@
 		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/main.cpp">
 			<Option target="exercises"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/analytical.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/Analytical.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/bounds.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/Constants.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/concepts/general.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/Experiment.cpp">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/constants.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/Utility.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/distribution.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/concepts/General.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/experiment.cpp">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/differentiate/Differentiate.cpp">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/integrator.h">
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/differentiate/Differentiate.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/models/Bounds.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/models/Dimensions.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/models/Distribution.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/models/Integrator.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/models/VectorMatrix.h">
 			<Option target="Source"/>
 		</Unit>
 		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/spline_interpolation/bicubic.h">
@@ -216,8 +233,8 @@
 		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/spline_interpolation/spline_interpolation.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/src/utility.h">
-			<Option target="Source"/>
+		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/test/DifferentiateSpec.cpp">
+			<Option target="ExpTests"/>
 		</Unit>
 		<Unit filename="/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/test/ExperimentsOnlySpec.cpp">
 			<Option target="ExpTests"/>
