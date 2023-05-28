@@ -2,9 +2,9 @@
 #include <catch2/matchers/catch_matchers_floating_point.hpp>
 #include <random>
 #include <iostream>
-#include "models/bounds.h"
-#include "experiment.cpp"
-#include "constants.h"
+#include "models/Bounds.h"
+#include "Experiment.cpp"
+#include "Constants.h"
 
 TEST_CASE("Hello")
 {

@@ -143,6 +143,36 @@ ExpTests\fast:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\test
 .PHONY : ExpTests\fast
 
+DifferentiateSpec.obj: DifferentiateSpec.cpp.obj
+.PHONY : DifferentiateSpec.obj
+
+# target to build an object file
+DifferentiateSpec.cpp.obj:
+	cd C:\Users\devel\ksm\AppliedMathLearning\build
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExpTests.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\ExpTests.dir\DifferentiateSpec.cpp.obj
+	cd C:\Users\devel\ksm\AppliedMathLearning\build\test
+.PHONY : DifferentiateSpec.cpp.obj
+
+DifferentiateSpec.i: DifferentiateSpec.cpp.i
+.PHONY : DifferentiateSpec.i
+
+# target to preprocess a source file
+DifferentiateSpec.cpp.i:
+	cd C:\Users\devel\ksm\AppliedMathLearning\build
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExpTests.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\ExpTests.dir\DifferentiateSpec.cpp.i
+	cd C:\Users\devel\ksm\AppliedMathLearning\build\test
+.PHONY : DifferentiateSpec.cpp.i
+
+DifferentiateSpec.s: DifferentiateSpec.cpp.s
+.PHONY : DifferentiateSpec.s
+
+# target to generate assembly for a file
+DifferentiateSpec.cpp.s:
+	cd C:\Users\devel\ksm\AppliedMathLearning\build
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\ExpTests.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\ExpTests.dir\DifferentiateSpec.cpp.s
+	cd C:\Users\devel\ksm\AppliedMathLearning\build\test
+.PHONY : DifferentiateSpec.cpp.s
+
 ExperimentsOnlySpec.obj: ExperimentsOnlySpec.cpp.obj
 .PHONY : ExperimentsOnlySpec.obj
 
@@ -243,6 +273,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... ExpTests
+	@echo ... DifferentiateSpec.obj
+	@echo ... DifferentiateSpec.i
+	@echo ... DifferentiateSpec.s
 	@echo ... ExperimentsOnlySpec.obj
 	@echo ... ExperimentsOnlySpec.i
 	@echo ... ExperimentsOnlySpec.s

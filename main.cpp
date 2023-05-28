@@ -1,6 +1,6 @@
 #include <iostream>
 #include <functional>
-#include "src/models/bounds.h"
+#include "src/models/Bounds.h"
 #include "src/spline_interpolation/spline_interpolation.h"
 #include <Eigen/Dense>
 template <class B, class A>
@@ -26,6 +26,9 @@ int main()
 			return 1;
 		}
 	};
-	std::cout << "Hello, World!" << std::endl;
+
+    for(int i = 0; i<1; i++) {
+        std::cout << "Hello, World!" << std::endl;
+    }
 	return 0;
 }

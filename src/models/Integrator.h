@@ -5,7 +5,7 @@
 #ifndef EXERCISES_SRC_INTEGRATOR_H_
 #define EXERCISES_SRC_INTEGRATOR_H_
 #include <functional>
-#include "models/bounds.h"
+#include "models/Bounds.h"
 
 
 

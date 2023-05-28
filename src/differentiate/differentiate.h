@@ -1,8 +1,0 @@
-//
-// Created by devel on 2023-05-26.
-//
-
-#ifndef EXERCISES_DIFFERENTIATE_H
-#define EXERCISES_DIFFERENTIATE_H
-
-#endif //EXERCISES_DIFFERENTIATE_H

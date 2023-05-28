@@ -143,65 +143,65 @@ Source\fast:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
 .PHONY : Source\fast
 
-differentiate\differentiate.obj: differentiate\differentiate.cpp.obj
-.PHONY : differentiate\differentiate.obj
+Experiment.obj: Experiment.cpp.obj
+.PHONY : Experiment.obj
 
 # target to build an object file
-differentiate\differentiate.cpp.obj:
+Experiment.cpp.obj:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\differentiate.cpp.obj
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\Experiment.cpp.obj
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : differentiate\differentiate.cpp.obj
+.PHONY : Experiment.cpp.obj
 
-differentiate\differentiate.i: differentiate\differentiate.cpp.i
-.PHONY : differentiate\differentiate.i
+Experiment.i: Experiment.cpp.i
+.PHONY : Experiment.i
 
 # target to preprocess a source file
-differentiate\differentiate.cpp.i:
+Experiment.cpp.i:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\differentiate.cpp.i
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\Experiment.cpp.i
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : differentiate\differentiate.cpp.i
+.PHONY : Experiment.cpp.i
 
-differentiate\differentiate.s: differentiate\differentiate.cpp.s
-.PHONY : differentiate\differentiate.s
+Experiment.s: Experiment.cpp.s
+.PHONY : Experiment.s
 
 # target to generate assembly for a file
-differentiate\differentiate.cpp.s:
+Experiment.cpp.s:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\differentiate.cpp.s
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\Experiment.cpp.s
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : differentiate\differentiate.cpp.s
+.PHONY : Experiment.cpp.s
 
-experiment.obj: experiment.cpp.obj
-.PHONY : experiment.obj
+differentiate\Differentiate.obj: differentiate\Differentiate.cpp.obj
+.PHONY : differentiate\Differentiate.obj
 
 # target to build an object file
-experiment.cpp.obj:
+differentiate\Differentiate.cpp.obj:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\experiment.cpp.obj
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\Differentiate.cpp.obj
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : experiment.cpp.obj
+.PHONY : differentiate\Differentiate.cpp.obj
 
-experiment.i: experiment.cpp.i
-.PHONY : experiment.i
+differentiate\Differentiate.i: differentiate\Differentiate.cpp.i
+.PHONY : differentiate\Differentiate.i
 
 # target to preprocess a source file
-experiment.cpp.i:
+differentiate\Differentiate.cpp.i:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\experiment.cpp.i
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\Differentiate.cpp.i
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : experiment.cpp.i
+.PHONY : differentiate\Differentiate.cpp.i
 
-experiment.s: experiment.cpp.s
-.PHONY : experiment.s
+differentiate\Differentiate.s: differentiate\Differentiate.cpp.s
+.PHONY : differentiate\Differentiate.s
 
 # target to generate assembly for a file
-experiment.cpp.s:
+differentiate\Differentiate.cpp.s:
 	cd C:\Users\devel\ksm\AppliedMathLearning\build
-	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\experiment.cpp.s
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Source.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Source.dir\differentiate\Differentiate.cpp.s
 	cd C:\Users\devel\ksm\AppliedMathLearning\build\src
-.PHONY : experiment.cpp.s
+.PHONY : differentiate\Differentiate.cpp.s
 
 # Help Target
 help:
@@ -213,12 +213,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... Source
-	@echo ... differentiate/differentiate.obj
-	@echo ... differentiate/differentiate.i
-	@echo ... differentiate/differentiate.s
-	@echo ... experiment.obj
-	@echo ... experiment.i
-	@echo ... experiment.s
+	@echo ... Experiment.obj
+	@echo ... Experiment.i
+	@echo ... Experiment.s
+	@echo ... differentiate/Differentiate.obj
+	@echo ... differentiate/Differentiate.i
+	@echo ... differentiate/Differentiate.s
 .PHONY : help
 
 

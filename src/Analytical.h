@@ -6,7 +6,7 @@
 #define EXERCISES_SRC_ANALYTICAL_H_
 
 #include <functional>
-#include "models/integrator.h"
+#include "models/Integrator.h"
 namespace analytical {
 
 	template <class Distribution, class FnType>

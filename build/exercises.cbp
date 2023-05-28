@@ -209,34 +209,40 @@
 		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/main.cpp">
 			<Option target="exercises"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/analytical.h">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/Analytical.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/concepts/general.h">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/Constants.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/constants.h">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/Experiment.cpp">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/differentiate/differentiate.cpp">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/Utility.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/differentiate/differentiate.h">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/concepts/General.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/experiment.cpp">
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/differentiate/Differentiate.cpp">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/differentiate/Differentiate.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/Bounds.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/Dimensions.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/Distribution.h">
+			<Option target="Source"/>
+		</Unit>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/Integrator.h">
 			<Option target="Source"/>
 		</Unit>
 		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/VectorMatrix.h">
-			<Option target="Source"/>
-		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/bounds.h">
-			<Option target="Source"/>
-		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/distribution.h">
-			<Option target="Source"/>
-		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/models/integrator.h">
 			<Option target="Source"/>
 		</Unit>
 		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/spline_interpolation/bicubic.h">
@@ -245,8 +251,8 @@
 		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/spline_interpolation/spline_interpolation.h">
 			<Option target="Source"/>
 		</Unit>
-		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/src/utility.h">
-			<Option target="Source"/>
+		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/test/DifferentiateSpec.cpp">
+			<Option target="ExpTests"/>
 		</Unit>
 		<Unit filename="C:/Users/devel/ksm/AppliedMathLearning/test/ExperimentsOnlySpec.cpp">
 			<Option target="ExpTests"/>
