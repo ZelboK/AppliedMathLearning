@@ -16,7 +16,7 @@ set(headers
 
 set(spline_interpolation_files
         spline_interpolation/spline_interpolation.h
-        spline_interpolation/bicubic.h)
+        spline_interpolation/bicubic.h spline_interpolation/SplineEquations.h)
 
 add_library(Source
         ${source_files}

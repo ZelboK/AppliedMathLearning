@@ -6,6 +6,7 @@
 #include <iostream>
 #include "models/VectorMatrix.h"
 #include "models/Dimensions.h"
+#include "spline_interpolation/SplineEquations.h"
 
 namespace differentiate
 {
@@ -46,7 +47,6 @@ namespace differentiate
 			(row + 1 <= matrix.rows) ? matrix.getPos(row + 1, col)
 									 : curPos;
 	}
-
 
 	double getXGradient(const VectorMatrix& matrix,
 		int curPos,
@@ -95,25 +95,32 @@ namespace differentiate
 		return { matrix.data.at(curPos), xGradient, yGradient, crossDerivative };
 	}
 
-	std::vector<std::vector<double>> attain4x4Neighborhood(const VectorMatrix& matrix,
+	SplineEquations attain4x4Neighborhood(const VectorMatrix& matrix,
 		int row,
 		int col)
 	{
 		std::vector<std::vector<double>> equations; // 4 vectors of 4 equations
 		// 1 per coordinate in the 2x2
-		equations.reserve(row * col);
 
 		for (int i = row - 1; i < row + 1; i++)
 		{
 			for (int j = col - 1; j < col + 1; j++)
 			{
+				// does it ever exceed the original image? it shouldn't, right? since it is
+				// scaled already at this point.
+				int rowToPass = (i > 0) ? i
+					: 1;
+				int colToPass = (j > 0) ? j
+					: 1;
 				equations
-					.push_back(grabEquationsFromCoordinates(matrix, i, j));
+					.push_back(grabEquationsFromCoordinates(matrix, rowToPass, colToPass));
 			}
 		}
-		return equations;
+		return { equations.at(0),
+				 equations.at(1),
+				 equations.at(2),
+				 equations.at(3) };
 	}
-
 
 }
 

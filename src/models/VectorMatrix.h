@@ -24,10 +24,11 @@ struct VectorMatrix {
 
     // f(row, colSize, col) = ((row-1) * colSize) + col - 1;
     [[nodiscard]] int getPos(int row, int col) const {
-        if (!(row > 0 && col > 0)) {
-            throw std::invalid_argument(
-                    std::format("Row and col must be greater than zero. Row was {}, col was {}.", row, col));
-        }
+//        if (!(row > 0 && col > 0)) {
+//            throw std::invalid_argument(
+//                    std::format("Row and col must be greater than zero. Row was {}, col was {}.", row, col));
+//        }
+
         return ((row - 1) * cols) + col - 1;
 
     }

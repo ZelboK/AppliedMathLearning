@@ -251,27 +251,16 @@ TEST_CASE("Attain 16 equations from 2x2 matrix using 4x4 neighborhood via attain
 		(((4.0 - 2.0) / 2.0 - (63.0 - 9.0) / 2.0) / 2.0)
 	};
 
-	std::vector<std::vector<double>> equationsFrom4x4 = differentiate::attain4x4Neighborhood(
+	SplineEquations equationsFrom4x4 = differentiate::attain4x4Neighborhood(
 		matrix4x4, 4, 3
 	);
-	std::vector<std::vector<double>> expectedEquations;
+	SplineEquations expectedEquations = SplineEquations(expected_row3col2, expected_row3col3, expected_row4col2,
+		expected_row4col3);
 
-	expectedEquations.push_back(expected_row3col2);
-	expectedEquations.push_back(expected_row3col3);
-	expectedEquations.push_back(expected_row4col2);
-	expectedEquations.push_back(expected_row4col3);
+	REQUIRE(equationsFrom4x4.pixelIntensities==expectedEquations.pixelIntensities);
+	REQUIRE(equationsFrom4x4.xGradient==expectedEquations.xGradient);
+	REQUIRE(equationsFrom4x4.yGradient==expectedEquations.yGradient);
+	REQUIRE(equationsFrom4x4.xyCrossDerivative==expectedEquations.xyCrossDerivative);
 
-	for (int i = 0; i < equationsFrom4x4.size(); i++)
-	{
-		auto actualRow = equationsFrom4x4.at(i);
-		auto expectedRow = expectedEquations.at(i);
-
-		for (int j = 0; j < actualRow.size(); j++)
-		{
-			auto actual = actualRow.at(j);
-			auto expected = expectedRow.at(j);
-			REQUIRE(actual == expected);
-		}
-	}
 
 }

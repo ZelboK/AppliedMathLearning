@@ -5,8 +5,9 @@
 #ifndef EXERCISES_DIFFERENTIATE_H
 #define EXERCISES_DIFFERENTIATE_H
 
-#include "src/models/VectorMatrix.h"
-#include "src/models/Dimensions.h"
+#include "models/VectorMatrix.h"
+#include "models/Dimensions.h"
+#include "spline_interpolation/SplineEquations.h"
 
 namespace differentiate {
     int getLeftPos(const VectorMatrix &matrix,
@@ -45,7 +46,7 @@ namespace differentiate {
                                                      int col);
 
 
-    std::vector<std::vector<double>> attain4x4Neighborhood(const VectorMatrix &matrix,
+    SplineEquations attain4x4Neighborhood(const VectorMatrix &matrix,
                                                            int row,
                                                            int col);
 
