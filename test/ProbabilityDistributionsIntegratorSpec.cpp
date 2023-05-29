@@ -6,7 +6,11 @@
 #include "Experiment.cpp"
 #include "Constants.h"
 
-TEST_CASE("Hello")
+// awkward name for the file...
+// for the PBRT textbook to assure validity of answers.
+// Includes trapezoidal, basic monte carlo integration, and importance sampling
+
+TEST_CASE("play with trapezoidal")
 {
 	std::function<float(float)> pdf = [](float x)
 	{

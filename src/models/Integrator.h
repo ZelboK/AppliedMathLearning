@@ -8,7 +8,7 @@
 #include "models/Bounds.h"
 
 
-
+// would be used for PBRT textbook
 // i do not like duck typing : (
 template <class Distribution, class FnType>
 struct Integrator {

@@ -7,6 +7,8 @@
 
 #include <functional>
 #include "models/Integrator.h"
+
+// would be used for the PBRT textbook, incomplete
 namespace analytical {
 
 	template <class Distribution, class FnType>
@@ -25,6 +27,9 @@ namespace analytical {
 
 }
 
+// i wanted to test out this way of organizing templated header files
+// separate definitions and declarations in the same file kind of like
+// haskell
 template<class Distribution, class FnType>
 auto analytical::compareIntegrators(
 	Integrator<Distribution, FnType> first,

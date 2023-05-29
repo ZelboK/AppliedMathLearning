@@ -8,6 +8,10 @@
 #include <functional>
 #include <concepts>
 
+// TODO
+// Implement abstraction / view over images and their data
+// Ideally no dependencies
+
 template<class T>
 concept Container =
 requires(T a) {

@@ -4,14 +4,13 @@
 
 
 #include <iostream>
-#include "models/VectorMatrix.h"
-#include "models/Dimensions.h"
+#include "models/ImageMatrixGrayscale.h"
 #include "spline_interpolation/SplineEquations.h"
 
 namespace differentiate
 {
 
-	int getLeftPos(const VectorMatrix& matrix,
+	int getLeftPos(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -20,7 +19,7 @@ namespace differentiate
 			   matrix.getPos(row, col - 1) : curPos;
 	}
 
-	int getRightPos(const VectorMatrix& matrix,
+	int getRightPos(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -28,7 +27,7 @@ namespace differentiate
 		return (col + 1 <= matrix.cols) ? matrix.getPos(row, col + 1) : curPos;
 	}
 
-	int getAbovePosition(const VectorMatrix& matrix,
+	int getAbovePosition(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -38,7 +37,7 @@ namespace differentiate
 						  : curPos;
 	}
 
-	int getBelowPosition(const VectorMatrix& matrix,
+	int getBelowPosition(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -48,7 +47,7 @@ namespace differentiate
 									 : curPos;
 	}
 
-	double getXGradient(const VectorMatrix& matrix,
+	double getXGradient(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -62,7 +61,7 @@ namespace differentiate
 			/ 2.0;
 	}
 
-	double getYGradient(const VectorMatrix& matrix,
+	double getYGradient(const ImageMatrixGrayscale& matrix,
 		int curPos,
 		int row,
 		int col)
@@ -73,7 +72,7 @@ namespace differentiate
 			/ 2;
 	}
 
-	std::vector<double> grabEquationsFromCoordinates(const VectorMatrix& matrix,
+	std::vector<double> grabEquationsFromCoordinates(const ImageMatrixGrayscale& matrix,
 		int row,
 		int col)
 	{
@@ -95,7 +94,7 @@ namespace differentiate
 		return { matrix.data.at(curPos), xGradient, yGradient, crossDerivative };
 	}
 
-	SplineEquations attain4x4Neighborhood(const VectorMatrix& matrix,
+	SplineEquations attain4x4Neighborhood(const ImageMatrixGrayscale& matrix,
 		int row,
 		int col)
 	{
@@ -124,14 +123,3 @@ namespace differentiate
 
 }
 
-/*
- *
-        int leftPos = getLeftPos(matrix, curPos, row, col);
-        int rightPos = getRightPos(matrix, curPos, row, col);
-        int belowPos = getBelowPos(matrix, curPos, row, col);
-        int abovePos = getAbovePos(matrix, curPos, row, col);
-
-        int abovePosForCrossDerivative = getBelowPosition(matrix, curPos, row - 1, col);
-        int belowPosForCrossDerivative = getAbovePosition(matrix, curPos, row + 1, col);
-
- */

@@ -213,7 +213,7 @@ RECENT REVISION HISTORY:
 //   If compiling for Windows and you wish to use Unicode filenames, compile
 //   with
 //       #define STBI_WINDOWS_UTF8
-//   and pass utf8-encoded filenames. Call stbi_convert_wchar_to_utf8 to convert
+//   and pass utf8-encoded filenames. Call stbi_convert_wchar_to_utf8 to attainImageMatrixFromPath
 //   Windows wchar_t filenames to utf8.
 //
 // ===========================================================================
@@ -319,7 +319,7 @@ RECENT REVISION HISTORY:
 // Call stbi_set_unpremultiply_on_load(1) as well to force a divide per
 // pixel to remove any premultiplied alpha *only* if the image file explicitly
 // says there's premultiplied data (currently only happens in iPhone images,
-// and only if iPhone convert-to-rgb processing is on).
+// and only if iPhone attainImageMatrixFromPath-to-rgb processing is on).
 //
 // ===========================================================================
 //
@@ -1734,7 +1734,7 @@ static stbi__uint32 stbi__get32le(stbi__context *s)
 //
 //  generic converter from built-in img_n to req_comp
 //    individual types do this automatically as much as possible (e.g. jpeg
-//    does all cases internally since it needs to colorspace convert anyway,
+//    does all cases internally since it needs to colorspace attainImageMatrixFromPath anyway,
 //    and it never has alpha, so very few cases ). png can automatically
 //    interleave an alpha=255 channel, but falls back to this for other cases
 //
@@ -1770,7 +1770,7 @@ static unsigned char *stbi__convert_format(unsigned char *data, int img_n, int r
 
       #define STBI__COMBO(a,b)  ((a)*8+(b))
       #define STBI__CASE(a,b)   case STBI__COMBO(a,b): for(i=x-1; i >= 0; --i, src += a, dest += b)
-      // convert source image with img_n components to one with req_comp components;
+      // attainImageMatrixFromPath source image with img_n components to one with req_comp components;
       // avoid switch per pixel, so use switch per scanline and massive macros
       switch (STBI__COMBO(img_n, req_comp)) {
          STBI__CASE(1,2) { dest[0]=src[0]; dest[1]=255;                                     } break;
@@ -1827,7 +1827,7 @@ static stbi__uint16 *stbi__convert_format16(stbi__uint16 *data, int img_n, int r
 
       #define STBI__COMBO(a,b)  ((a)*8+(b))
       #define STBI__CASE(a,b)   case STBI__COMBO(a,b): for(i=x-1; i >= 0; --i, src += a, dest += b)
-      // convert source image with img_n components to one with req_comp components;
+      // attainImageMatrixFromPath source image with img_n components to one with req_comp components;
       // avoid switch per pixel, so use switch per scanline and massive macros
       switch (STBI__COMBO(img_n, req_comp)) {
          STBI__CASE(1,2) { dest[0]=src[0]; dest[1]=0xffff;                                     } break;
@@ -2131,13 +2131,13 @@ stbi_inline static int stbi__jpeg_huff_decode(stbi__jpeg *j, stbi__huffman *h)
    if (k > j->code_bits)
       return -1;
 
-   // convert the huffman code to the symbol id
+   // attainImageMatrixFromPath the huffman code to the symbol id
    c = ((j->code_buffer >> (32 - k)) & stbi__bmask[k]) + h->delta[k];
    if(c < 0 || c >= 256) // symbol id out of bounds!
        return -1;
    STBI_ASSERT((((j->code_buffer) >> (32 - h->size[c])) & stbi__bmask[h->size[c]]) == h->code[c]);
 
-   // convert the id to a symbol
+   // attainImageMatrixFromPath the id to a symbol
    j->code_bits -= k;
    j->code_buffer <<= k;
    return h->values[c];
@@ -2410,7 +2410,7 @@ static int stbi__jpeg_decode_block_prog_ac(stbi__jpeg *j, short data[64], stbi__
    return 1;
 }
 
-// take a -128..127 value and stbi__clamp it and convert to 0..255
+// take a -128..127 value and stbi__clamp it and attainImageMatrixFromPath to 0..255
 stbi_inline static stbi_uc stbi__clamp(int x)
 {
    // trick to use a single test to catch both cases
@@ -3778,7 +3778,7 @@ static void stbi__YCbCr_to_RGB_simd(stbi_uc *out, stbi_uc const *y, stbi_uc cons
          int16x8_t gws = vaddq_s16(vaddq_s16(yws, cb0), cr1);
          int16x8_t bws = vaddq_s16(yws, cb1);
 
-         // undo scaling, round, convert to byte
+         // undo scaling, round, attainImageMatrixFromPath to byte
          uint8x8x4_t o;
          o.val[0] = vqrshrun_n_s16(rws, 4);
          o.val[1] = vqrshrun_n_s16(gws, 4);
@@ -3885,7 +3885,7 @@ static stbi_uc *load_jpeg_image(stbi__jpeg *z, int *out_x, int *out_y, int *comp
    // accessing uninitialized coutput[0] later
    if (decode_n <= 0) { stbi__cleanup_jpeg(z); return NULL; }
 
-   // resample and color-convert
+   // resample and color-attainImageMatrixFromPath
    {
       int k;
       unsigned int i,j;
@@ -5037,7 +5037,7 @@ static void stbi__de_iphone(stbi__png *z)
    stbi__uint32 i, pixel_count = s->img_x * s->img_y;
    stbi_uc *p = z->out;
 
-   if (s->img_out_n == 3) {  // convert bgr to rgb
+   if (s->img_out_n == 3) {  // attainImageMatrixFromPath bgr to rgb
       for (i=0; i < pixel_count; ++i) {
          stbi_uc t = p[0];
          p[0] = p[2];
@@ -5047,7 +5047,7 @@ static void stbi__de_iphone(stbi__png *z)
    } else {
       STBI_ASSERT(s->img_out_n == 4);
       if (stbi__unpremultiply_on_load) {
-         // convert bgr to rgb and unpremultiply
+         // attainImageMatrixFromPath bgr to rgb and unpremultiply
          for (i=0; i < pixel_count; ++i) {
             stbi_uc a = p[3];
             stbi_uc t = p[0];
@@ -5063,7 +5063,7 @@ static void stbi__de_iphone(stbi__png *z)
             p += 4;
          }
       } else {
-         // convert bgr to rgb
+         // attainImageMatrixFromPath bgr to rgb
          for (i=0; i < pixel_count; ++i) {
             stbi_uc t = p[0];
             p[0] = p[2];
@@ -5587,7 +5587,7 @@ static void *stbi__bmp_load(stbi__context *s, int *x, int *y, int *comp, int req
    if (req_comp && req_comp >= 3) // we can directly decode 3 or 4
       target = req_comp;
    else
-      target = s->img_n; // if they want monochrome, we'll post-convert
+      target = s->img_n; // if they want monochrome, we'll post-attainImageMatrixFromPath
 
    // sanity-check size
    if (!stbi__mad3sizes_valid(target, s->img_x, s->img_y, 0))
@@ -5847,7 +5847,7 @@ errorEnd:
    return res;
 }
 
-// read 16bit value and convert to 24bit RGB
+// read 16bit value and attainImageMatrixFromPath to 24bit RGB
 static void stbi__tga_read_rgb16(stbi__context *s, stbi_uc* out)
 {
    stbi__uint16 px = (stbi__uint16)stbi__get16le(s);
@@ -6059,7 +6059,7 @@ static void *stbi__tga_load(stbi__context *s, int *x, int *y, int *comp, int req
       }
    }
 
-   // convert to target component count
+   // attainImageMatrixFromPath to target component count
    if (req_comp && req_comp != tga_comp)
       tga_data = stbi__convert_format(tga_data, tga_comp, req_comp, tga_width, tga_height);
 
@@ -6307,7 +6307,7 @@ static void *stbi__psd_load(stbi__context *s, int *x, int *y, int *comp, int req
       }
    }
 
-   // convert to desired output format
+   // attainImageMatrixFromPath to desired output format
    if (req_comp && req_comp != 4) {
       if (ri->bits_per_channel == 16)
          out = (stbi_uc *) stbi__convert_format16((stbi__uint16 *) out, 4, req_comp, w, h);
@@ -7847,7 +7847,7 @@ STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user
       1.37  (2014-06-04)
               remove duplicate typedef
       1.36  (2014-06-03)
-              convert to header file single-file library
+              attainImageMatrixFromPath to header file single-file library
               if de-iphone isn't set, load iphone images color-swapped instead of returning NULL
       1.35  (2014-05-27)
               various warnings

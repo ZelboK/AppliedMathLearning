@@ -9,14 +9,12 @@ set(headers
         Utility.h
         concepts/General.h
         models/Integrator.h
-        models/Distribution.h
-        models/VectorMatrix.h
+        models/ImageMatrixGrayscale.h
         models/Dimensions.h
         differentiate/Differentiate.h)
 
 set(spline_interpolation_files
-        spline_interpolation/spline_interpolation.h
-        spline_interpolation/bicubic.h spline_interpolation/SplineEquations.h)
+        spline_interpolation/BicubicImageSplineInterpolator.h spline_interpolation/SplineEquations.h)
 
 add_library(Source
         ${source_files}

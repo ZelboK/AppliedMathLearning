@@ -1,5 +1,5 @@
 set(test_files
-        MainSpec.cpp
+        ProbabilityDistributionsIntegratorSpec.cpp
         SplineInterpolationSpec.cpp ExperimentsOnlySpec.cpp DifferentiateSpec.cpp)
 
 add_executable(ExpTests ${test_files})

@@ -15,10 +15,10 @@ struct SplineEquations
 	std::vector<double> yGradient;
 	std::vector<double> xyCrossDerivative;
 
-	SplineEquations(std::vector<double> pixelIntensities,
-		std::vector<double> xGradient,
-		std::vector<double> yGradient,
-		std::vector<double> xyCrossDerivative)
+	SplineEquations(std::vector<double>& pixelIntensities,
+		std::vector<double>& xGradient,
+		std::vector<double>& yGradient,
+		std::vector<double>& xyCrossDerivative)
 		: pixelIntensities(std::move(pixelIntensities)),
 		  xGradient(std::move(xGradient)),
 		  yGradient(std::move(yGradient)),

@@ -5,6 +5,7 @@
 #ifndef EXERCISES_SRC_BOUNDS_H_
 #define EXERCISES_SRC_BOUNDS_H_
 
+// used for PBRT textbook
 struct Bounds {
 	float lower;
 	float upper;

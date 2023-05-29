@@ -5,48 +5,48 @@
 #ifndef EXERCISES_DIFFERENTIATE_H
 #define EXERCISES_DIFFERENTIATE_H
 
-#include "models/VectorMatrix.h"
+#include "models/ImageMatrixGrayscale.h"
 #include "models/Dimensions.h"
 #include "spline_interpolation/SplineEquations.h"
 
 namespace differentiate {
-    int getLeftPos(const VectorMatrix &matrix,
+    int getLeftPos(const ImageMatrixGrayscale &matrix,
                    int curPos,
                    int row,
                    int col);
 
-    int getRightPos(const VectorMatrix &matrix,
+    int getRightPos(const ImageMatrixGrayscale &matrix,
                     int curPos,
                     int row,
                     int col);
 
-    int getAbovePosition(const VectorMatrix &matrix,
+    int getAbovePosition(const ImageMatrixGrayscale &matrix,
                          int curPos,
                          int row,
                          int col);
 
-    int getBelowPosition(const VectorMatrix &matrix,
+    int getBelowPosition(const ImageMatrixGrayscale &matrix,
                          int curPos,
                          int row,
                          int col);
 
-    double getXGradient(const VectorMatrix &matrix,
+    double getXGradient(const ImageMatrixGrayscale &matrix,
                         int curPos,
                         int row,
                         int col);
 
 
-    double getYGradient(const VectorMatrix &matrix,
+    double getYGradient(const ImageMatrixGrayscale &matrix,
                         int curPos,
                         int row,
                         int col);
 
-    std::vector<double> grabEquationsFromCoordinates(const VectorMatrix &matrix,
+    std::vector<double> grabEquationsFromCoordinates(const ImageMatrixGrayscale &matrix,
                                                      int row,
                                                      int col);
 
 
-    SplineEquations attain4x4Neighborhood(const VectorMatrix &matrix,
+    SplineEquations attain4x4Neighborhood(const ImageMatrixGrayscale &matrix,
                                                            int row,
                                                            int col);
 

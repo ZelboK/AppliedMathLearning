@@ -9,11 +9,14 @@
 #include <utility>
 #include <vector>
 #include "models/Dimensions.h"
-#include "models/VectorMatrix.h"
+#include "models/ImageMatrixGrayscale.h"
 #include <iostream>
 #include <cmath>
 #include "differentiate/differentiate.h"
 
+// This code needs to be refactored to be templated
+// as such I will likely not be able to separate in a CPP file?
+//
 class BicubicImageSplineInterpolator
 {
  public:
@@ -56,7 +59,21 @@ class BicubicImageSplineInterpolator
 		return result;
 	}
 
-	std::vector<unsigned char> bicubic(const VectorMatrix& matrix,
+	std::tuple<double, double> normalizePixelCoordinate(int fromRow, int fromCol) {
+		int x0 = std::floor(fromCol) - 1;
+		int y0 = std::floor(fromRow) - 1;
+
+		// The size of the grid is 4 in both dimensions
+		int dx = 4, dy = 4;
+
+		// Calculate the normalized coordinates
+		double xNorm = static_cast<double>(fromCol - x0) / dy;
+		double yNorm = static_cast<double>(fromRow - y0) / dx;
+		return std::make_tuple(xNorm, yNorm); // idk if i want a tuple
+
+	}
+
+	std::vector<unsigned char> bicubic(const ImageMatrixGrayscale& matrix,
 		Dimensions newDims)
 	{
 
@@ -64,14 +81,14 @@ class BicubicImageSplineInterpolator
 
 		data.reserve(newDims.size());
 		double scale = 2; // this should come as a parameter or as a calculation from newDims
-		// and matrix dims
+		// and matrix dims so change later
 
 		for (int i = 1; i < newDims.y; i++)
 		{
 			for (int j = 1; j < newDims.x; j++)
 			{
-				int fromRow = i / scale; // we want it to round down here.
-				int fromCol = j / scale;
+				double fromRow = i / scale;
+				double fromCol = j / scale;
 
 				SplineEquations observations =
 					differentiate::attain4x4Neighborhood(matrix,
@@ -89,19 +106,10 @@ class BicubicImageSplineInterpolator
 				Eigen::VectorXd x = Eigen::VectorXd::Map(observationsFlat.data(),
 					observationsFlat.size());
 				Eigen::VectorXd b = A.colPivHouseholderQr().solve(x);
-				int x0 = std::floor(fromRow) - 1;
-				int y0 = std::floor(fromCol) - 1;
-
-				// The size of the grid is 4 in both dimensions
-				int dx = 4, dy = 4;
-
-				// Calculate the normalized coordinates
-				double x_norm = static_cast<double>(fromRow - x0) / dx;
-				double y_norm = static_cast<double>(fromCol - y0) / dy;
-
-				double pixelValue = evaluateBicubicPolynomial(b, y_norm, x_norm);
+				auto [xNorm, yNorm] = normalizePixelCoordinate(fromRow, fromCol);
+				double pixelValue = evaluateBicubicPolynomial(b, xNorm, yNorm);
 				std::cout << pixelValue << std::endl;
-				// here we are assuming pixelValue is already in [0, 255], so we convert it to unsigned char directly
+				// here we are assuming pixelValue is already in [0, 255], so we attainImageMatrixFromPath it to unsigned char directly
 				data[i * newDims.x + j] = static_cast<unsigned char>(pixelValue);
 			}
 		}

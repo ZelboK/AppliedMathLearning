@@ -9,13 +9,13 @@
 #include <stdexcept>
 #include <format>
 
-struct VectorMatrix {
+struct ImageMatrixGrayscale {
     int rows;
     int cols;
 
     std::vector<double> data;
 
-    VectorMatrix(int rows,
+    ImageMatrixGrayscale(int rows,
                  int cols,
                  std::vector<double> data) :
             rows(rows),

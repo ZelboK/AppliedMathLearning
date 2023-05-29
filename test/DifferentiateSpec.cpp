@@ -3,7 +3,7 @@
 //
 #include <catch2/catch_test_macros.hpp>
 #include <vector>
-#include "models/VectorMatrix.h"
+#include "models/ImageMatrixGrayscale.h"
 #include "differentiate/Differentiate.h"
 
 TEST_CASE("edge replication strategy iterate over pixels")
@@ -12,7 +12,7 @@ TEST_CASE("edge replication strategy iterate over pixels")
 							  7, 4, 1,
 							  9, 20, 33 };
 
-	VectorMatrix matrix(3, 3, data);
+	ImageMatrixGrayscale matrix(3, 3, data);
 	SECTION("get below pixel")
 	{
 		int curPos = 5;
@@ -56,7 +56,7 @@ TEST_CASE("differentiate with edge replication strategy")
 							  7, 4, 1,
 							  9, 20, 33 };
 
-	VectorMatrix matrix(3, 3, data);
+	ImageMatrixGrayscale matrix(3, 3, data);
 	SECTION("Grab 4 equations of (1, 1) in above 3x3 matrix")
 	{
 		std::vector<double> fourEqs =
@@ -98,7 +98,7 @@ TEST_CASE("differentiate with edge replication strategy")
 										 33, 9, 10, 63,
 										 9, 2, 13, 4 };
 
-		VectorMatrix matrix4x4(4, 4, data16elems);
+		ImageMatrixGrayscale matrix4x4(4, 4, data16elems);
 		std::vector<double> fourEqs =
 			differentiate::grabEquationsFromCoordinates
 				(matrix4x4, 3, 2);
@@ -126,7 +126,7 @@ TEST_CASE("Attain 16 equations from 2x2 matrix using 4x4 neighborhood")
 									 9, 2, 13, 4 };
 	// check against 9, 10
 	// 				 2, 13
-	VectorMatrix matrix4x4(4, 4, data16elems);
+	ImageMatrixGrayscale matrix4x4(4, 4, data16elems);
 	std::vector<double> fourEqs_row3col2 =
 		differentiate::grabEquationsFromCoordinates
 			(matrix4x4, 3, 2);
@@ -220,7 +220,7 @@ TEST_CASE("Attain 16 equations from 2x2 matrix using 4x4 neighborhood via attain
 									 9, 2, 13, 4 };
 	// check against 9, 10
 	// 				 2, 13
-	VectorMatrix matrix4x4(4, 4, data16elems);
+	ImageMatrixGrayscale matrix4x4(4, 4, data16elems);
 
 
 	std::vector<double> expected_row3col2{
