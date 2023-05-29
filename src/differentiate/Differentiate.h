@@ -5,8 +5,8 @@
 #ifndef EXERCISES_DIFFERENTIATE_H
 #define EXERCISES_DIFFERENTIATE_H
 
-#include "models/VectorMatrix.h"
-#include "models/Dimensions.h"
+#include "src/models/VectorMatrix.h"
+#include "src/models/Dimensions.h"
 
 namespace differentiate {
     int getLeftPos(const VectorMatrix &matrix,
@@ -29,9 +29,6 @@ namespace differentiate {
                          int row,
                          int col);
 
-    double getGradientAbove(const VectorMatrix &matrix,
-                            int pos);
-
     double getXGradient(const VectorMatrix &matrix,
                         int curPos,
                         int row,
@@ -52,7 +49,6 @@ namespace differentiate {
                                                            int row,
                                                            int col);
 
-    std::vector<double> bicubic(const VectorMatrix &matrix, Dimensions newDims);
 
 }
 

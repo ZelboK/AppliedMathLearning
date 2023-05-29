@@ -47,11 +47,6 @@ namespace differentiate
 									 : curPos;
 	}
 
-	double getGradientAbove(const VectorMatrix& matrix,
-		int pos)
-	{
-		return 0.0; // implement later if need
-	}
 
 	double getXGradient(const VectorMatrix& matrix,
 		int curPos,
@@ -119,26 +114,6 @@ namespace differentiate
 		return equations;
 	}
 
-	std::vector<double> bicubic(const VectorMatrix& matrix,
-		Dimensions newDims)
-	{
-		std::vector<double> resized;
-		resized.reserve(newDims.size());
-		double scale = 0; // this should come as a parameter or as a calculation from newDims
-		// and matrix dims
-
-		for (int i = 0; i < newDims.y; i++)
-		{
-			for (int j = 0; j < newDims.x; j++)
-			{
-				int fromRow = i / scale; // we want it to round down here.
-				int fromCol = j / scale;
-				attain4x4Neighborhood(matrix, fromRow, fromCol);
-
-			}
-		}
-		return resized; // implement
-	}
 
 }
 

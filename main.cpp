@@ -1,46 +1,41 @@
-#include <iostream>
 #include <functional>
-#include "src/models/Bounds.h"
-#include "src/spline_interpolation/spline_interpolation.h"
-#include <Eigen/Dense>
-template <class B, class A>
-float function(std::function<B(A)> fn) {
-
-}
-
-template <class A>
-float computeCdfUnaryPdf(std::function<A(A)> pdf, Bounds bounds) {
-	auto atLower = pdf(bounds.lower);
-	auto atHigher = pdf(bounds.upper);
+#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
 
 
-}
+#include "src/spline_interpolation/bicubic.h"
+#include "src/models/VectorMatrix.h"
+#include "external/stb_image.h"
+#include "external/stb_image_write.h"
 
 
-int main()
-{
-
-	int row = 2;
-	int col = 3;
-
-	for(int i = col-1; i<col+1; i++) {
-		for(int j = row-1; j<row+1; j++) {
-			std::cout << i << ", " << j << " ";
-		}
-		std::cout << std::endl;
-	}
-
-
-	std::function<float(float)> uniform = [](float x) {
-		if(x<0 || x>1) {
-			return 0;
-		} else {
-			return 1;
-		}
-	};
-
-    for(int i = 0; i<1; i++) {
-        std::cout << "Hello, World!" << std::endl;
+auto convert() {
+    int width, height, channels;
+    unsigned char *img = stbi_load(R"(C:\Users\devel\ksm\AppliedMathLearning\shiki2.png)",
+                                   &width,
+                                   &height,
+                                   &channels, 0);
+    if (img == nullptr) {
+        throw std::runtime_error("Failed to load image.");
     }
-	return 0;
+
+// Convert image data to double and store it in a VectorMatrix
+    std::vector<double> data(width * height);
+    for (int i = 0; i < width * height; ++i) {
+        data[i] = static_cast<double>(img[i]);
+    }
+    VectorMatrix matrix(height, width, std::move(data));
+
+    stbi_image_free(img);
+    return matrix;
+}
+
+int main() {
+    int width = 400*2;
+    int height = 400*2;
+    MyInterpolationClass interpolator = MyInterpolationClass();
+    std::vector<unsigned char> data = interpolator.bicubic(convert(), Dimensions(width, height));
+    if (!stbi_write_png("output.png", width, height, 1, data.data(), width)) {
+        throw std::runtime_error("Failed to write image.");
+    }
 }

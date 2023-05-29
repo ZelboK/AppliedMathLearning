@@ -8,123 +8,93 @@
 #include <Eigen/Dense>
 #include <utility>
 #include <vector>
-#include "models/Dimensions.h"
-#include "models/VectorMatrix.h"
-#include "differentiate/differentiate.h"
+#include "src/models/Dimensions.h"
+#include "src/models/VectorMatrix.h"
+#include "src/differentiate/differentiate.h"
 
-using namespace differentiate;
+class MyInterpolationClass {
+public:
+    Eigen::MatrixXd A;
 
-struct Coordinates {
-    int x_;
-    int y_;
-
-    Coordinates(int x, int y) : x_(x), y_(y) {
-
-    }
-};
-
-struct SplineNeighborhoodEquations {
-    std::vector<double> pixelIntensities_;
-    std::vector<double> f_x_;
-    std::vector<double> f_y_;
-    std::vector<double> f_xy_;
-
-    SplineNeighborhoodEquations(std::vector<double> pixelIntensities,
-                                std::vector<double> f_x,
-                                std::vector<double> f_y,
-                                std::vector<double> f_xy)
-            : pixelIntensities_(std::move(pixelIntensities)),
-              f_x_(std::move(f_x)),
-              f_y_(std::move(f_y)),
-              f_xy_(std::move(f_xy)) {}
-
-    bool operator==(const SplineNeighborhoodEquations &other) const {
-        return compareVectors(pixelIntensities_, other.pixelIntensities_) &&
-               compareVectors(f_x_, other.f_x_) &&
-               compareVectors(f_y_, other.f_y_) &&
-               compareVectors(f_xy_, other.f_xy_);
+    MyInterpolationClass() {
+        initMatrix();
     }
 
-private:
-    static bool compareVectors(const std::vector<double> &v1, const std::vector<double> &v2) {
-        if (v1.size() != v2.size()) {
-            return false;
-        }
+    void initMatrix() {
+        A.resize(16, 16);
+        A.row(0) << 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+        A.row(1) << 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+        A.row(2) << -3, 3, 0, 0, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+        A.row(3) << 2, -2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+        A.row(4) << 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0;
+        A.row(5) << 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0;
+        A.row(6) << 0, 0, 0, 0, 0, 0, 0, 0, -3, 3, 0, 0, -2, -1, 0, 0;
+        A.row(7) << 0, 0, 0, 0, 0, 0, 0, 0, 2, -2, 0, 0, 1, 1, 0, 0;
+        A.row(8) << -3, 0, 3, 0, 0, 0, 0, 0, -2, 0, -1, 0, 0, 0, 0, 0;
+        A.row(9) << 0, 0, 0, 0, -3, 0, 3, 0, 0, 0, 0, 0, -2, 0, -1, 0;
+        A.row(10) << 9, -9, -9, 9, 6, 3, -6, -3, 6, -6, 3, -3, 4, 2, 2, 1;
+        A.row(11) << -6, 6, 6, -6, -3, -3, 3, 3, -4, 4, -2, 2, -2, -2, -1, -1;
+        A.row(12) << 2, 0, -2, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0;
+        A.row(13) << 0, 0, 0, 0, 2, 0, -2, 0, 0, 0, 0, 0, 1, 0, 1, 0;
+        A.row(14) << -6, 6, 6, -6, -4, -2, 4, 2, -3, 3, -1, 1, -2, -1, -2, -1;
+        A.row(15) << 4, -4, -4, 4, 2, 2, -2, -2, 2, -2, 2, -2, 1, 1, 1, 1;
+    }
 
-        for (size_t i = 0; i < v1.size(); ++i) {
-            if (!almost_equal(v1[i], v2[i], 1e-12)) {
-                return false;
+    double evaluateBicubicPolynomial(Eigen::VectorXd &b, double x, double y) {
+        double x2 = x * x, y2 = y * y, x3 = x2 * x, y3 = y2 * y;
+        double xy = x * y, x2y = x2 * y, xy2 = x * y2, x3y = x3 * y, xy3 = x * y3;
+
+        double result = b(0) +
+                        b(1) * x + b(2) * y + b(3) * x2 +
+                        b(4) * xy + b(5) * y2 + b(6) * x3 +
+                        b(7) * x2y + b(8) * xy2 + b(9) * y3 +
+                        b(10) * x3y + b(11) * x2 * y2 + b(12) * xy3 +
+                        b(13) * x3 * y2 + b(14) * x2 * y3 + b(15) * x3 * y3;
+        return result;
+    }
+
+
+    std::vector<unsigned char> bicubic(const VectorMatrix &matrix,
+                                       Dimensions newDims) {
+
+        std::vector<unsigned char> data(newDims.y * newDims.x);
+
+        data.reserve(newDims.size());
+        double scale = 2; // this should come as a parameter or as a calculation from newDims
+        // and matrix dims
+
+        for (int i = 1; i < newDims.y; i++) {
+            for (int j = 1; j < newDims.x; j++) {
+                double scaled_i = i / scale; // we want it to round down here.
+                double scaled_j = j / scale;
+
+                int fromRow = static_cast<int>(scaled_i);
+                int fromCol = static_cast<int>(scaled_j);
+
+                double fractionalRow = scaled_i - fromRow;
+                double fractionalCol = scaled_j - fromCol;
+
+                auto observations =
+                        differentiate::attain4x4Neighborhood(matrix,
+                                                             fromRow, fromCol);
+                std::vector<double> observationsFlat;
+                for (const auto &r: observations) {
+                    for (const auto &val: r) {
+                        observationsFlat.push_back(val);
+                    }
+                }
+                Eigen::VectorXd x = Eigen::VectorXd::Map(observationsFlat.data(), observationsFlat.size());
+                Eigen::VectorXd b = A.colPivHouseholderQr().solve(x);
+
+                double pixelValue = evaluateBicubicPolynomial(b, fractionalCol, fractionalRow);
+
+                // here we are assuming pixelValue is already in [0, 255], so we convert it to unsigned char directly
+                data[i * newDims.x + j] = static_cast<unsigned char>(pixelValue);
             }
         }
-
-        return true;
-    }
-
-    static bool almost_equal(double a, double b, double epsilon) {
-        return std::abs(a - b) <= epsilon * std::abs(a + b);
-    }
-};
-
-
-struct ImageVectorWrapper {
-    std::vector<std::vector<double>> matrix_;
-
-    explicit ImageVectorWrapper(std::vector<std::vector<double>> matrix) :
-            matrix_(std::move(matrix)) {}
-
-    double get(int row, int col) {
-        size_t safeRow = row, safeCol = col;
-
-        // Check row bounds
-        if (row < 0) {
-            safeRow = 0;
-        } else if (row >= matrix_.size()) {
-            safeRow = matrix_.size() - 1;
-        }
-
-        // Check column bounds
-        if (col < 0) {
-            safeCol = 0;
-        } else if (!matrix_.empty() && col >= matrix_[0].size()) {
-            safeCol = matrix_[0].size() - 1;
-        }
-
-        return matrix_.at(safeRow).at(safeCol);
+        return data;
     }
 
 };
-
-struct Point {
-    int x;
-    int y;
-
-    explicit Point(int x, int y) : x(x), y(y) {}
-};
-
-namespace bicubic {
-
-
-
-	std::vector<double> bicubic(const VectorMatrix& matrix,
-		Dimensions newDims)
-	{
-		std::vector<double> resized;
-		resized.reserve(newDims.size());
-		double scale = 0; // this should come as a parameter or as a calculation from newDims
-		// and matrix dims
-
-		for (int i = 0; i < newDims.y; i++)
-		{
-			for (int j = 0; j < newDims.x; j++)
-			{
-				int fromRow = i / scale; // we want it to round down here.
-				int fromCol = j / scale;
-				differentiate::attain4x4Neighborhood(matrix, fromRow, fromCol);
-
-			}
-		}
-		return resized; // implement
-	}
-}
 
 #endif //EXERCISES_SRC_SPLINE_INTERPOLATION_BICUBIC_HPP_
