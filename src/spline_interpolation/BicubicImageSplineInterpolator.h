@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cmath>
 #include "differentiate/differentiate.h"
+#include "SplineEquations.h"
 
 // This code needs to be refactored to be templated
 // as such I will likely not be able to separate in a CPP file?

@@ -11,33 +11,27 @@
 
 namespace differentiate {
     int getLeftPos(const ImageMatrixGrayscale &matrix,
-                   int curPos,
                    int row,
                    int col);
 
     int getRightPos(const ImageMatrixGrayscale &matrix,
-                    int curPos,
                     int row,
                     int col);
 
     int getAbovePosition(const ImageMatrixGrayscale &matrix,
-                         int curPos,
                          int row,
                          int col);
 
     int getBelowPosition(const ImageMatrixGrayscale &matrix,
-                         int curPos,
                          int row,
                          int col);
 
     double getXGradient(const ImageMatrixGrayscale &matrix,
-                        int curPos,
                         int row,
                         int col);
 
 
     double getYGradient(const ImageMatrixGrayscale &matrix,
-                        int curPos,
                         int row,
                         int col);
 

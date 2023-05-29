@@ -15,9 +15,8 @@ TEST_CASE("edge replication strategy iterate over pixels")
 	ImageMatrixGrayscale matrix(3, 3, data);
 	SECTION("get below pixel")
 	{
-		int curPos = 5;
 		int actual =
-			differentiate::getBelowPosition(matrix, curPos, 2, 3);
+			differentiate::getBelowPosition(matrix, 2, 3);
 		int expected = 8;
 
 		REQUIRE(actual == expected);
@@ -25,25 +24,22 @@ TEST_CASE("edge replication strategy iterate over pixels")
 
 	SECTION("get above pixel")
 	{
-		int curPos = 5;
 		int actual =
-			differentiate::getAbovePosition(matrix, curPos, 2, 3);
+			differentiate::getAbovePosition(matrix, 2, 3);
 		int expected = 2;
 
 		REQUIRE(actual == expected);
 	}SECTION("get left pixel")
 	{
-		int curPos = 5;
 		int actual =
-			differentiate::getLeftPos(matrix, curPos, 2, 3);
+			differentiate::getLeftPos(matrix, 2, 3);
 		int expected = 4;
 
 		REQUIRE(actual == expected);
 	}SECTION("get right pixel")
 	{
-		int curPos = 5;
 		int actual =
-			differentiate::getRightPos(matrix, curPos, 2, 3);
+			differentiate::getRightPos(matrix, 2, 3);
 		int expected = 5;
 
 		REQUIRE(actual == expected);
