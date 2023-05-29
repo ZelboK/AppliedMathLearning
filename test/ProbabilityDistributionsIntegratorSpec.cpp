@@ -2,11 +2,15 @@
 #include <catch2/matchers/catch_matchers_floating_point.hpp>
 #include <random>
 #include <iostream>
-#include "bounds.h"
-#include "experiment.cpp"
-#include "constants.h"
+#include "models/Bounds.h"
+#include "Experiment.cpp"
+#include "Constants.h"
 
-TEST_CASE("Hello")
+// awkward name for the file...
+// for the PBRT textbook to assure validity of answers.
+// Includes trapezoidal, basic monte carlo integration, and importance sampling
+
+TEST_CASE("play with trapezoidal")
 {
 	std::function<float(float)> pdf = [](float x)
 	{

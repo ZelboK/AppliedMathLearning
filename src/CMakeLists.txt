@@ -1,24 +1,26 @@
 set(source_files
-        experiment.cpp)
+        Experiment.cpp
+        differentiate/Differentiate.cpp)
+
 set(headers
-        bounds.h
-        constants.h
-        analytical.h
-        integrator.h
-        distribution.h
-        utility.h
-        concepts/general.h)
+        models/Bounds.h
+        Constants.h
+        Analytical.h
+        Utility.h
+        concepts/General.h
+        models/Integrator.h
+        models/ImageMatrixGrayscale.h
+        models/Dimensions.h
+        differentiate/Differentiate.h)
 
 set(spline_interpolation_files
-        spline_interpolation/spline_interpolation.h
-        spline_interpolation/bicubic.h)
+        spline_interpolation/BicubicImageSplineInterpolator.h spline_interpolation/SplineEquations.h)
 
 add_library(Source
         ${source_files}
         ${headers}
         ${spline_interpolation_files})
 
-message("${CMAKE_CURRENT_SOURCE_DIR}")
 target_include_directories(Source
         PUBLIC
         "${CMAKE_CURRENT_SOURCE_DIR}"

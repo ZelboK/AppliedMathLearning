@@ -6,7 +6,9 @@
 #define EXERCISES_SRC_ANALYTICAL_H_
 
 #include <functional>
-#include "integrator.h"
+#include "models/Integrator.h"
+
+// would be used for the PBRT textbook, incomplete
 namespace analytical {
 
 	template <class Distribution, class FnType>
@@ -23,19 +25,11 @@ namespace analytical {
 
 	}
 
-	template<typename T>
-	void foo(const T& container)
-	requires requires(T a) {
-		{ a.begin() } -> std::same_as<typename T::iterator>;
-		{ a.end() } -> std::same_as<typename T::iterator>;
-		requires std::same_as<typename T::value_type, int>;
-	}
-	{
-		// your code here
-	}
-
 }
 
+// i wanted to test out this way of organizing templated header files
+// separate definitions and declarations in the same file kind of like
+// haskell
 template<class Distribution, class FnType>
 auto analytical::compareIntegrators(
 	Integrator<Distribution, FnType> first,
