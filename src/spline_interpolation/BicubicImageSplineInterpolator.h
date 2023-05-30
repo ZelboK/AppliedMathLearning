@@ -13,10 +13,7 @@
 #include <iostream>
 #include <cmath>
 #include "differentiate/differentiate.h"
-<<<<<<< HEAD
-=======
 #include "SplineEquations.h"
->>>>>>> a74f6a759180d7c1a4b789a65e2c128a1aac6d17
 
 // This code needs to be refactored to be templated
 // as such I will likely not be able to separate in a CPP file?
@@ -41,7 +38,6 @@ class BicubicImageSplineInterpolator
 		A = initMatrix(A);
 	}
 
-<<<<<<< HEAD
 	// https://en.wikipedia.org/wiki/Bicubic_interpolation
 	// refer to the above document
 	// this matrix below is manually added because it is uniform
@@ -52,8 +48,7 @@ class BicubicImageSplineInterpolator
 	// b represents the 16 coefficients we are looking to solve for
 	// x represents the observations that are made from the
 	// 4x4 neighborhoods
-=======
->>>>>>> a74f6a759180d7c1a4b789a65e2c128a1aac6d17
+
 	Eigen::MatrixXd initMatrix(Eigen::MatrixXd A)
 	{
 		A.resize(16, 16);
@@ -135,7 +130,6 @@ class BicubicImageSplineInterpolator
 				Eigen::VectorXd b = A.colPivHouseholderQr().solve(x);
 				auto [xNorm, yNorm] = normalizePixelCoordinate(fromRow, fromCol);
 				double pixelValue = evaluateBicubicPolynomial(b, xNorm, yNorm);
-				std::cout << pixelValue << std::endl;
 				// here we are assuming pixelValue is already in [0, 255], so we attainImageMatrixFromPath it to unsigned char directly
 				data[i * newDims.x + j] = static_cast<unsigned char>(pixelValue);
 			}
