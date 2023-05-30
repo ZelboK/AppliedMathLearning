@@ -36,7 +36,7 @@ int main()
 {
 	int width = 400 * 2;
 	int height = 400 * 2; // for now just leave scale to 2 for brevity
-	std::string filePath = "/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/shiki2.png";
+	std::string filePath = "resources/shiki2.png";
 	BicubicImageSplineInterpolator interpolator = BicubicImageSplineInterpolator();
 	std::vector<unsigned char> data =
 		interpolator
