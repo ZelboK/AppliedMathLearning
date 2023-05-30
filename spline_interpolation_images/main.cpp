@@ -5,6 +5,8 @@
 // TO DO
 // implement a simple app here to take an image as input
 // and resize it
+// for now this logic just exists in src/main.cpp
+// refactor it to be here later
 
 int main() {
 
