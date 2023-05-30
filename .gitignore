@@ -28,6 +28,8 @@ CTestTestfile.cmake
 CPackConfig.cmake
 CPackSourceConfig.cmake
 cmake-build-debug/
+build/
+cmake-build-build/
 
 *.swp
 *.swo

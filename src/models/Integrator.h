@@ -5,10 +5,10 @@
 #ifndef EXERCISES_SRC_INTEGRATOR_H_
 #define EXERCISES_SRC_INTEGRATOR_H_
 #include <functional>
-#include "bounds.h"
+#include "models/Bounds.h"
 
 
-
+// would be used for PBRT textbook
 // i do not like duck typing : (
 template <class Distribution, class FnType>
 struct Integrator {

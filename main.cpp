@@ -1,31 +1,50 @@
-#include <iostream>
-#include <functional>
-#include "src/bounds.h"
-#include "src/spline_interpolation/spline_interpolation.h"
-#include <Eigen/Dense>
-template <class B, class A>
-float function(std::function<B(A)> fn) {
+#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
 
+#include "src/spline_interpolation/BicubicImageSplineInterpolator.h"
+#include "src/models/ImageMatrixGrayscale.h"
+#include "external/stb_image.h"
+#include "external/stb_image_write.h"
+
+
+ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
+{
+	int width, height, channels;
+	unsigned char* img = stbi_load(
+		filePath.c_str(),
+		&width,
+		&height,
+		&channels, 0);
+	if (img == nullptr)
+	{
+		throw std::runtime_error("Failed to load image.");
+	}
+
+// Convert image data to double and store it in a ImageMatrixGrayscale
+	std::vector<double> data(width * height);
+	for (int i = 0; i < width * height; ++i)
+	{
+		data.at(i) = static_cast<double>(img[i]);
+	}
+	ImageMatrixGrayscale matrix(height, width, std::move(data));
+
+	stbi_image_free(img);
+	return matrix;
 }
-
-template <class A>
-float computeCdfUnaryPdf(std::function<A(A)> pdf, Bounds bounds) {
-	auto atLower = pdf(bounds.lower);
-	auto atHigher = pdf(bounds.upper);
-
-
-}
-
 
 int main()
 {
-	std::function<float(float)> uniform = [](float x) {
-		if(x<0 || x>1) {
-			return 0;
-		} else {
-			return 1;
-		}
-	};
-	std::cout << "Hello, World!" << std::endl;
-	return 0;
+	int width = 400 * 2;
+	int height = 400 * 2; // for now just leave scale to 2 for brevity
+	std::string filePath = "/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/shiki2.png";
+	BicubicImageSplineInterpolator interpolator = BicubicImageSplineInterpolator();
+	std::vector<unsigned char> data =
+		interpolator
+			.bicubic(attainImageMatrixFromPath(filePath), Dimensions(width, height));
+
+	if (!stbi_write_png("output.png",
+		width, height, 1, data.data(), width))
+	{
+		throw std::runtime_error("Failed to write image.");
+	}
 }

@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cmath>
 #include "differentiate/differentiate.h"
+#include "SplineEquations.h"
 
 // This code needs to be refactored to be templated
 // as such I will likely not be able to separate in a CPP file?
@@ -27,16 +28,6 @@ class BicubicImageSplineInterpolator
 		A = initMatrix(A);
 	}
 
-	// https://en.wikipedia.org/wiki/Bicubic_interpolation
-	// refer to the above document
-	// this matrix below is manually added because it is uniform
-	// for spline interpolations.
-	// The matrix is of the form A(b) = x
-	// used to find the coefficients that are used to interpolate the pixel
-	// intensity.
-	// b represents the 16 coefficients we are looking to solve for
-	// x represents the observations that are made from the
-	// 4x4 neighborhoods
 	Eigen::MatrixXd initMatrix(Eigen::MatrixXd A)
 	{
 		A.resize(16, 16);

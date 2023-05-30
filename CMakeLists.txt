@@ -11,4 +11,9 @@ find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 enable_testing()
 add_subdirectory(src)
 add_subdirectory(test)
-target_link_libraries(exercises Eigen3::Eigen)
+target_link_libraries(exercises Eigen3::Eigen Source)
+
+
+target_include_directories(exercises PRIVATE
+        "${CMAKE_SOURCE_DIR}/internal_libraries"
+        )
