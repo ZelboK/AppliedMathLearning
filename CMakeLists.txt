@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(exercises main.cpp)
 
+
 find_package(Catch2 CONFIG REQUIRED)
 find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 enable_testing()

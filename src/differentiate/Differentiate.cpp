@@ -3,7 +3,6 @@
 //
 
 
-#include <iostream>
 #include "models/ImageMatrixGrayscale.h"
 #include "spline_interpolation/SplineEquations.h"
 
