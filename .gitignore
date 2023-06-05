@@ -30,6 +30,7 @@ CPackSourceConfig.cmake
 cmake-build-debug/
 build/
 cmake-build-build/
+cmake-build-release/
 
 *.swp
 *.swo
