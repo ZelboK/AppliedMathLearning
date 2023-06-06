@@ -84,6 +84,9 @@ static auto experiment(int stop,
 	return variance;
 }
 
+// TODO incomplete
+// conducts a trial, prove that with increasing trial count
+// variance approaches 0
 TEST_CASE("Several trials Monte Carlo")
 {
 	std::function<float(float)> normDist = constants::standardNormalDistPdf;
