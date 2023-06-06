@@ -1,7 +1,7 @@
 //
 // Created by devel on 2023-05-27.
 //
-#include <catch2/catch_test_macros.hpp>
+#include <catch2/catch.hpp>
 #include <vector>
 #include "models/ImageMatrixGrayscale.h"
 #include "differentiate/Differentiate.h"

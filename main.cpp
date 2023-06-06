@@ -5,6 +5,7 @@
 #include "src/models/ImageMatrixGrayscale.h"
 #include "external/stb_image.h"
 #include "external/stb_image_write.h"
+#include <cuda_runtime.h>
 
 
 ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
@@ -26,7 +27,9 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
 	{
 		data.at(i) = static_cast<double>(img[i]);
 	}
-	ImageMatrixGrayscale matrix(height, width, std::move(data));
+	ImageMatrixGrayscale matrix(height,
+                                width,
+                                std::move(data));
 
 	stbi_image_free(img);
 	return matrix;
@@ -34,17 +37,8 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
 
 int main()
 {
-	int width = 400 * 2;
-	int height = 400 * 2; // for now just leave scale to 2 for brevity
-	std::string filePath = "/Users/danialjavady/Desktop/RealKSM/AppliedMathLearning/shiki2.png";
-	BicubicImageSplineInterpolator interpolator = BicubicImageSplineInterpolator();
-	std::vector<unsigned char> data =
-		interpolator
-			.bicubic(attainImageMatrixFromPath(filePath), Dimensions(width, height));
+    int deviceCount;
+   // cudaGetDeviceCount(&deviceCount);
+    std::cout << deviceCount << std::endl;
 
-	if (!stbi_write_png("output.png",
-		width, height, 1, data.data(), width))
-	{
-		throw std::runtime_error("Failed to write image.");
-	}
 }

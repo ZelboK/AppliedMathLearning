@@ -1,5 +1,4 @@
-#include <catch2/catch_test_macros.hpp>
-#include <catch2/matchers/catch_matchers_floating_point.hpp>
+#include <catch2/catch.hpp>
 #include <random>
 #include <iostream>
 #include "models/Bounds.h"
@@ -85,6 +84,9 @@ static auto experiment(int stop,
 	return variance;
 }
 
+// TODO incomplete
+// conducts a trial, prove that with increasing trial count
+// variance approaches 0
 TEST_CASE("Several trials Monte Carlo")
 {
 	std::function<float(float)> normDist = constants::standardNormalDistPdf;

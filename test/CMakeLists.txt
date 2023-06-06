@@ -1,6 +1,8 @@
 set(test_files
         ProbabilityDistributionsIntegratorSpec.cpp
-        SplineInterpolationSpec.cpp ExperimentsOnlySpec.cpp DifferentiateSpec.cpp)
+        SplineInterpolationSpec.cpp
+        ExperimentsOnlySpec.cpp
+        DifferentiateSpec.cpp)
 
 add_executable(ExpTests ${test_files})
 find_package(Catch2 REQUIRED)

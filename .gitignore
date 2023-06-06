@@ -19,6 +19,7 @@
 *.bin
 *.hex
 *.elf
+main
 
 # CMake build folders
 CMakeFiles/

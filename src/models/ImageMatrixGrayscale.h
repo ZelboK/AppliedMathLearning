@@ -7,7 +7,6 @@
 
 #include <vector>
 #include <stdexcept>
-#include <format>
 
 struct ImageMatrixGrayscale {
     int rows;

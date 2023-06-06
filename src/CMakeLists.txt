@@ -14,7 +14,9 @@ set(headers
         differentiate/Differentiate.h)
 
 set(spline_interpolation_files
-        spline_interpolation/BicubicImageSplineInterpolator.h spline_interpolation/SplineEquations.h)
+        spline_interpolation/BicubicImageSplineInterpolator.h
+        spline_interpolation/SplineEquations.h
+        )
 
 add_library(Source
         ${source_files}

@@ -3,7 +3,6 @@
 //
 
 
-#include <iostream>
 #include "models/ImageMatrixGrayscale.h"
 #include "spline_interpolation/SplineEquations.h"
 
@@ -96,7 +95,9 @@ namespace differentiate {
                 int colToPass = (j > 0) ? j
                                         : 1;
                 equations
-                        .push_back(grabEquationsFromCoordinates(matrix, rowToPass, colToPass));
+                        .push_back(grabEquationsFromCoordinates(matrix,
+                                                                rowToPass,
+                                                                colToPass));
             }
         }
         return {equations.at(0),
