@@ -5,7 +5,6 @@
 #include "src/models/ImageMatrixGrayscale.h"
 #include "external/stb_image.h"
 #include "external/stb_image_write.h"
-#include <cuda_runtime.h>
 
 
 ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
@@ -37,8 +36,6 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string& filePath)
 
 int main()
 {
-    int deviceCount;
-   // cudaGetDeviceCount(&deviceCount);
-    std::cout << deviceCount << std::endl;
+
 
 }

@@ -5,7 +5,7 @@
 // It simply exists so i can just play around
 // Look at it similar to doing math problems in a textbook in a notebook
 
-#include <catch2/catch.hpp>
+#include <catch.hpp>
 #include <iostream>
 #include <stdexcept>
 #include <vector>

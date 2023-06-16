@@ -29,12 +29,23 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string &filePath) {
 }
 
 int main() {
-    int width = 140 * 2;
-    int height = 140 * 2; // for now just leave scale to 2 for brevity
-    std::string filePath = "../resources/shiki2.png";
-    std::string path = R"(C:\Users\devel\ksm\AppliedMathLearning\resources\two.jpg)";
+    int width = 270 * 2;
+    int height = 197 * 2; // for now just leave scale to 2 for brevity
+    int channels;
+    std::string path = R"(C:\Users\devel\ksm\AppliedMathLearning\resources\ya.png)";
     BicubicImageSplineInterpolator interpolator =
             BicubicImageSplineInterpolator();
+
+    auto imgMatrix = attainImageMatrixFromPath(path);
+    auto test  = stbi_load(
+            path.c_str(),
+            &width,
+            &height,
+            &channels, 0);
+    for(int i = 0; i < imgMatrix.data.size(); i++) {
+        assert(imgMatrix.data.at(i)==test[i]);
+    }
+
     std::vector<unsigned char> data =
             interpolator
                     .bicubic(attainImageMatrixFromPath(path),
