@@ -12,7 +12,8 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string &filePath) {
             filePath.c_str(),
             &width,
             &height,
-            &channels, 0);
+            &channels,
+			STBI_grey);
     if (img == nullptr) {
         throw std::runtime_error("Failed to load image.");
     }
@@ -31,20 +32,10 @@ ImageMatrixGrayscale attainImageMatrixFromPath(const std::string &filePath) {
 int main() {
     int width = 270 * 2;
     int height = 197 * 2; // for now just leave scale to 2 for brevity
-    int channels;
-    std::string path = R"(C:\Users\devel\ksm\AppliedMathLearning\resources\ya.png)";
+    std::string path = R"(/Users/danialjavady/Desktop/RealKSM/anew/AppliedMathLearning/resources/ya.png)";
     BicubicImageSplineInterpolator interpolator =
             BicubicImageSplineInterpolator();
 
-    auto imgMatrix = attainImageMatrixFromPath(path);
-    auto test  = stbi_load(
-            path.c_str(),
-            &width,
-            &height,
-            &channels, 0);
-    for(int i = 0; i < imgMatrix.data.size(); i++) {
-        assert(imgMatrix.data.at(i)==test[i]);
-    }
 
     std::vector<unsigned char> data =
             interpolator

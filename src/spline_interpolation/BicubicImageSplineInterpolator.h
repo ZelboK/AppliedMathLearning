@@ -23,7 +23,6 @@ public:
 
     BicubicImageSplineInterpolator() {}
 
-
     Eigen::Matrix4d fromDifferentials(const SplineEquations &observations) {
         Eigen::Matrix4d A;
         auto intensities = observations.pixelIntensities;
@@ -36,7 +35,7 @@ public:
                 intensities.at(2), intensities.at(3), yGradients.at(2), yGradients.at(3),
                 xGradients.at(0), xGradients.at(1), cross.at(0), cross.at(1),
                 xGradients.at(2), xGradients.at(3), cross.at(2), cross.at(3);
-        std::cout << A << std::endl;
+      //  std::cout << A << std::endl;
         return A;
     }
 
